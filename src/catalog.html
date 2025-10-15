@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Аренда автомобилей</title>
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/inputmask.css">
+	<link rel="stylesheet" href="css/sumoSelect.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__content">
+					<div class="header__left">
+						<a href="/" class="header__logo">
+							<img src="./img/header/logo.svg" alt="">
+						</a>
+						<nav class="header__nav">
+							<ul class="header__menu">
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Новые машины</a>
+								</li>
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Каталог</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">Отзывы</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">О компании</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__right">
+						<a href="/auth.html" class="header__link">
+							<img src="./img/header/lk.svg" alt="">
+						</a>
+						<a href="/catalog.html" class="header__btn btn this--secondary">Выбрать машину</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="catalog_page">
+			<section class="catalog section">
+				<div class="container">
+					<div class="catalog__content">
+						<h1 class="catalog__title">Легкий способ арендовать машину твоей мечты</h1>
+						<div class="catalog__subtitle">Ответы на популярные вопросы об аренде автомобилей</div>
+						<div class="catalog__body">
+							<div class="catalog__left">
+								<div class="catalog__filter">
+									<h3 class="catalog__filter_title">Фильтры</h3>
+									<div class="catalog__filter_filters">
+										<div class="catalog__filter_filter filter this--category">
+											<div class="filter__title">По категории автомобиля</div>
+											<div class="filter__body this--radio">
+												<div class="filter__radio">
+													<input type="radio" name="category" value="1" id="radio_1">
+													<label for="radio_1">Эконом</label>
+												</div>
+												<div class="filter__radio">
+													<input type="radio" name="category" value="1" id="radio_2">
+													<label for="radio_2">Бизнес</label>
+												</div>
+												<div class="filter__radio">
+													<input type="radio" name="category" value="1" id="radio_3">
+													<label for="radio_3">Премиум</label>
+												</div>
+												<div class="filter__radio">
+													<input type="radio" name="category" value="1" id="radio_4">
+													<label for="radio_4">Спорткар</label>
+												</div>
+												<div class="filter__radio">
+													<input type="radio" name="category" value="1" id="radio_5">
+													<label for="radio_5">Внедорожник / SUV</label>
+												</div>
+												<div class="filter__radio">
+													<input type="radio" name="category" value="1" id="radio_6">
+													<label for="radio_6">Минивэн</label>
+												</div>
+											</div>
+										</div>
+										<div class="catalog__filter_filter filter this--price">
+											<div class="filter__title">По цене аренды</div>
+											<div class="filter__body this--price price">
+												<div class="price__values_wr">
+													<div class="price__value" id="minCost"></div>
+													<div class="price__value" id="maxCost"></div>
+												</div>
+												<div class="price__slider_wr">
+													<div class="price__slider" id="price_slider"></div>
+												</div>
+											</div>
+										</div>
+										<div class="catalog__filter_filter filter this--brand">
+											<div class="filter__title">По бренду</div>
+											<div class="filter__body this--checkbox">
+												<div class="filter__checkbox">
+													<input type="checkbox" value="1" id="checkbox_1">
+													<label for="checkbox_1">
+														<svg width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<g clip-path="url(#clip0_100_32)">
+																<path d="M0 35.4479C0.0874146 35.7878 0.3826 36.1351 0.787593 36.2221H2.01161L2.07405 36.2467V39.3252H2.83839V36.2467L2.90783 36.2221H4.13292C4.54244 36.117 4.83127 35.7878 4.91718 35.4479V35.4404H0V35.4479Z" fill="#323232"/>
+																<path d="M7.56492 39.333H10.4727C10.8773 39.2529 11.178 38.8976 11.2623 38.5537H6.77539C6.85915 38.8977 7.16423 39.2529 7.56492 39.333Z" fill="#323232"/>
+																<path d="M7.56492 37.7548H10.4727C10.8773 37.6753 11.178 37.3199 11.2623 36.9756H6.77539C6.85915 37.32 7.16423 37.6753 7.56492 37.7548Z" fill="#323232"/>
+																<path d="M7.56492 36.218H10.4727C10.8773 36.1376 11.178 35.7826 11.2623 35.4385H6.77539C6.85915 35.7826 7.16423 36.1376 7.56492 36.218Z" fill="#323232"/>
+																<path d="M14.1957 36.21H16.8821C17.2871 36.0927 17.6272 35.7852 17.7101 35.4443H13.4427V37.7421H16.9354V38.5485L14.1957 38.5506C13.7664 38.67 13.4023 38.9573 13.2207 39.3368L13.4427 39.3327H17.6858V36.9782H14.1957V36.21Z" fill="#323232"/>
+																<path d="M23.3397 39.3348C23.7211 39.1736 23.9263 38.8949 24.0048 38.5687H20.6119L20.6141 35.4443L19.8535 35.4465V39.3348H23.3397Z" fill="#323232"/>
+																<path d="M26.3028 36.2216H29.2116C29.6156 36.1415 29.9161 35.7862 30.0008 35.4424H25.5137C25.5975 35.7863 25.9024 36.1415 26.3028 36.2216Z" fill="#323232"/>
+																<path d="M25.6289 36.9814V39.3326H26.3854V37.7672H29.1386V39.3326H29.8946V36.9855L25.6289 36.9814Z" fill="#323232"/>
+																<path d="M14.9998 27.7554L18.8189 6.34719C22.4592 6.34719 23.6074 6.74505 23.7732 8.36902C23.7732 8.36902 26.2152 7.46149 27.4469 5.6183C22.6406 3.3985 17.8114 3.29839 17.8114 3.29839L14.9934 6.7193L14.9998 6.71887L12.1819 3.29785C12.1819 3.29785 7.35252 3.39807 2.54688 5.61787C3.77746 7.46106 6.22044 8.3686 6.22044 8.3686C6.3872 6.74452 7.53403 6.34665 11.1499 6.34407L14.9998 27.7554Z" fill="#323232"/>
+																<path d="M14.9992 2.3112C18.8844 2.28159 23.3315 2.91025 27.8839 4.88788C28.4924 3.79633 28.6488 3.31391 28.6488 3.31391C23.6723 1.35152 19.0119 0.679932 14.9987 0.663086C10.9857 0.679932 6.32546 1.35163 1.34961 3.31391C1.34961 3.31391 1.57159 3.90814 2.11395 4.88788C6.66554 2.91025 11.1133 2.28159 14.9987 2.3112H14.9992Z" fill="#323232"/>
+															</g>
+															<defs>
+																<clipPath id="clip0_100_32">
+																	<rect width="30" height="38.6747" fill="white" transform="translate(0 0.663086)"/>
+																</clipPath>
+															</defs>
+														</svg>
+														Tesla
+													</label>
+												</div>
+												<div class="filter__checkbox">
+													<input type="checkbox" value="2" id="checkbox_2">
+													<label for="checkbox_2">
+														<svg width="43" height="44" viewBox="0 0 43 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<g clip-path="url(#clip0_100_45)">
+																<path d="M21.5 0.5C9.62624 0.5 0 10.1262 0 22C0 33.8738 9.62624 43.5 21.5 43.5C33.3738 43.5 43 33.8738 43 22C43 10.1262 33.3738 0.5 21.5 0.5ZM41.6019 22C41.6019 33.1014 32.6027 42.1019 21.5 42.1019C10.3973 42.1019 1.39811 33.1014 1.39811 22C1.39811 10.8986 10.3986 1.89811 21.5 1.89811C32.6014 1.89811 41.6019 10.8986 41.6019 22Z" fill="#323232"/>
+																<path d="M21.4998 9.25V9.94903C28.144 9.94903 33.5506 15.3544 33.5506 21.9998H34.2496C34.2496 14.9587 28.5409 9.25 21.4998 9.25ZM21.4998 34.0506C14.8557 34.0506 9.44903 28.6453 9.44903 21.9998H8.75C8.75 29.0409 14.4588 34.7496 21.4998 34.7496" fill="#323232"/>
+																<path d="M31.9206 12.8791C32.2127 13.1926 32.6336 13.6982 32.87 14.0055L37.2236 11.2421C37.0061 10.9576 36.6598 10.5253 36.4007 10.2206L33.6436 12.0435L33.4553 12.2053L33.5956 12.0005L34.8129 9.57094L33.9521 8.71004L31.5212 9.92743L31.3164 10.0677L31.4795 9.8794L33.3036 7.1236C32.9825 6.85055 32.6741 6.60026 32.2809 6.29688L29.5176 10.6467C29.8677 10.9159 30.3291 11.3116 30.6237 11.5808L33.2252 10.2308L33.3921 10.1082L33.2694 10.275L31.9206 12.8791Z" fill="#323232"/>
+																<path d="M22.0417 7.36451L23.2313 4.69976L23.3072 4.46337L23.2857 4.70988L23.4108 8.27088C23.828 8.31006 24.259 8.36821 24.6837 8.439L24.4903 3.16513C23.8962 3.0994 23.3046 3.05262 22.713 3.02734L21.5412 5.93606L21.4995 6.15223L21.4578 5.93606L20.2872 3.02734C19.6956 3.05262 19.104 3.0994 18.5098 3.16513L18.3164 8.439C18.7412 8.36821 19.1723 8.31132 19.5894 8.27088L19.7146 4.70988L19.6931 4.46337L19.7689 4.69976L20.9584 7.36451H22.0417Z" fill="#323232"/>
+																<path d="M12.4192 11.5686C13.1069 10.8444 13.4961 10.0075 12.8085 9.20857C12.4344 8.775 11.8061 8.68015 11.2852 8.89377L11.2334 8.91406L11.2498 8.86854C11.327 8.66247 11.3762 8.00512 10.8163 7.5513C10.5432 7.33008 10.2006 7.24792 9.85428 7.28331C9.20831 7.34905 8.71154 7.79022 7.35892 9.2983C6.95061 9.75337 6.35648 10.4714 6 10.9366L9.71522 14.461C10.9465 13.0982 11.4483 12.5913 12.4192 11.5686ZM7.57129 10.7065C8.31967 9.79134 9.11477 8.96079 9.47507 8.63212C9.58882 8.52846 9.71271 8.4248 9.86313 8.38435C10.1071 8.31735 10.3587 8.49054 10.4156 8.74084C10.4724 8.99243 10.3144 9.23128 10.1387 9.42851C9.74305 9.87474 8.29184 11.393 8.29184 11.393L7.57129 10.7065ZM9.02625 12.087C9.02625 12.087 10.4396 10.5928 10.901 10.1149C11.0842 9.92529 11.2018 9.81024 11.3282 9.74834C11.4913 9.66867 11.6695 9.65228 11.8288 9.75848C11.9855 9.86338 12.0576 10.0441 12.0184 10.2236C11.9717 10.4372 11.7972 10.6408 11.6531 10.7962C11.4584 11.0048 9.78224 12.7987 9.77972 12.8012L9.02625 12.087Z" fill="#323232"/>
+																<path d="M21.4998 9.25V21.9998H8.75C8.75 14.9537 14.4537 9.25 21.4998 9.25Z" fill="#323232"/>
+																<path d="M34.2498 22C34.2498 29.0462 28.5462 34.7498 21.5 34.7498V22H34.2498Z" fill="#323232"/>
+															</g>
+															<defs>
+																<clipPath id="clip0_100_45">
+																	<rect width="43" height="43" fill="white" transform="translate(0 0.5)"/>
+																</clipPath>
+															</defs>
+														</svg>
+														BMW
+													</label>
+												</div>
+												<div class="filter__checkbox">
+													<input type="checkbox" value="3" id="checkbox_3">
+													<label for="checkbox_3">
+														<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<g clip-path="url(#clip0_114_769)">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M16 8.62695C16 4.22695 12.4 0.626953 8 0.626953C3.6 0.626953 0 4.22695 0 8.62695C0 13.027 3.6 16.627 8 16.627C12.4 16.627 16 13.027 16 8.62695ZM9.15 7.95195L9.05 7.22695L8.27948 1.98268C9.95026 2.04982 11.5171 2.71908 12.725 3.92695C13.975 5.17695 14.675 6.87695 14.675 8.65195C14.675 9.74079 14.4208 10.7919 13.9301 11.7362L9.15 7.95195ZM9.15 7.95195L9.13635 7.96091C9.1361 7.96071 9.13587 7.96048 9.13562 7.96029L9.15 7.95195ZM3.275 3.92695C4.45329 2.74867 6.03142 2.05907 7.69531 1.98383L6.825 7.97695L2.0576 11.7262C1.56409 10.7794 1.3 9.71731 1.3 8.62695C1.3 6.85195 2 5.15195 3.275 3.92695ZM2.36792 12.2596L7.9899 9.97737L13.6355 12.246C13.378 12.6488 13.074 13.0279 12.725 13.377C11.475 14.627 9.775 15.327 8 15.327C6.225 15.327 4.525 14.627 3.25 13.352C2.91567 13.0176 2.62069 12.6511 2.36792 12.2596Z" fill="#323232"/>
+															</g>
+															<defs>
+																<clipPath id="clip0_114_769">
+																	<rect width="16" height="16" fill="white" transform="translate(0 0.626953)"/>
+																</clipPath>
+															</defs>
+														</svg>
+														Mercedes-Benz
+													</label>
+												</div>
+												<div class="filter__checkbox">
+													<input type="checkbox" value="4" id="checkbox_4">
+													<label for="checkbox_4">
+														<svg width="43" height="44" viewBox="0 0 43 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<g clip-path="url(#clip0_100_53)">
+																<path d="M21.5 40.9666C11.1334 40.9666 2.61046 32.3666 2.61046 22C2.61046 19.85 2.99387 17.777 3.68546 15.7811L14.7436 37.2811C14.8959 37.5875 15.05 37.8186 15.4334 37.8186C15.8186 37.8186 15.9709 37.5875 16.125 37.2811L21.2689 25.8395C21.3459 25.6855 21.423 25.6084 21.5 25.6084C21.6541 25.6084 21.6541 25.7625 21.7311 25.8395L26.952 37.2811C27.1061 37.5875 27.2584 37.8186 27.6436 37.8186C28.027 37.8186 28.1811 37.5875 28.3334 37.2811L39.3916 15.7811C40.0814 17.7 40.4666 19.773 40.4666 22C40.3895 32.3666 31.8666 40.9666 21.5 40.9666ZM21.5 17.0855C21.3459 17.0855 21.3459 16.9314 21.2689 16.8561L15.3564 4.10842C19.3272 2.67789 23.6728 2.67789 27.6436 4.10842L21.7311 16.8561C21.6541 16.9314 21.6541 17.0855 21.5 17.0855ZM15.2811 30.9064C15.127 30.9064 15.127 30.7541 15.05 30.677L5.375 12.0921C7.06454 9.32933 9.52092 7.02525 12.3625 5.41275L19.1959 20.1546C19.35 20.4627 19.5041 20.5398 19.7334 20.5398H23.2666C23.4959 20.5398 23.65 20.4627 23.8041 20.1546L30.5605 5.41275C33.402 7.02525 35.8584 9.32933 37.548 12.0921L27.95 30.677C27.873 30.8311 27.7959 30.9064 27.7189 30.9064C27.5666 30.9064 27.5666 30.7541 27.4895 30.677L23.8041 22.5375C23.65 22.2311 23.4959 22.1541 23.2666 22.1541H19.7334C19.5041 22.1541 19.35 22.2311 19.1959 22.5375L15.5105 30.677C15.4334 30.7541 15.4334 30.9064 15.2811 30.9064ZM21.5 43.5C33.402 43.5 43 33.902 43 22C43 10.098 33.402 0.5 21.5 0.5C9.59796 0.5 0 10.098 0 22C0 33.902 9.59796 43.5 21.5 43.5Z" fill="#323232"/>
+															</g>
+															<defs>
+																<clipPath id="clip0_100_53">
+																	<rect width="43" height="43" fill="white" transform="translate(0 0.5)"/>
+																</clipPath>
+															</defs>
+														</svg>
+														Volkswagen
+													</label>
+												</div>
+												<div class="filter__checkbox">
+													<input type="checkbox" value="5" id="checkbox_5">
+													<label for="checkbox_5">
+														<svg width="51" height="28" viewBox="0 0 51 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M43.9762 5.01459C47.3406 6.90219 51.1487 10.2196 50.7505 14.6439C50.2912 18.7436 46.5614 21.6063 43.2299 23.3293C33.505 28.0954 19.8434 28.2443 9.80025 24.0787C6.40602 22.6301 2.5979 20.1436 1.16809 16.4013C0.0753481 13.3285 1.40796 10.1224 3.64517 7.99179C8.32341 3.63181 14.2888 2.13458 20.4298 1.27231C27.0928 0.441389 34.1055 1.17511 40.0724 3.27279C41.405 3.77761 42.7219 4.33104 43.9746 5.01302L43.9762 5.01459ZM38.4874 4.88446C34.5052 3.74626 30.3161 3.06271 25.8731 3.0972C23.8099 3.12855 22.3189 5.09611 21.4786 6.77206C20.8437 8.10467 20.1146 9.69909 20.6524 11.2292C20.9393 11.7325 21.3986 12.0758 21.9066 12.2044C24.0795 12.692 26.0471 11.8125 27.999 11.3264C31.8384 10.0409 35.5995 8.57657 38.8825 5.94271C39.0251 5.76398 39.2791 5.58526 39.1521 5.30776C39.011 5.06319 38.7241 5.01459 38.4874 4.88446ZM17.7818 4.10371C17.6705 3.89363 17.3836 3.92498 17.1625 3.92498C15.0366 4.26676 13.0205 4.86878 11.0858 5.61818C7.81702 7.03231 3.89758 9.11432 2.93026 13.0181C2.32824 16.011 4.42122 18.5319 6.73839 20.0934C7.19775 20.3035 7.69003 20.9557 8.19799 20.4681C10.8005 14.8555 13.5441 9.21152 17.7175 4.34828L17.7802 4.10371H17.7818ZM45.4687 8.39941C44.8964 8.00747 44.3885 7.43836 43.6751 7.37409C43.539 7.42248 43.4183 7.50638 43.3255 7.61709C42.5561 9.37292 41.7305 11.1036 40.85 12.8064C38.9311 16.5973 36.7425 20.338 33.853 23.6711L33.806 23.9C33.8374 24.096 34.0443 24.063 34.1713 24.0787C36.2016 23.8843 38.0751 23.2321 39.9313 22.5987C43.3412 21.2316 47.6244 19.0854 48.6089 15.0515C49.2125 12.3188 47.4347 10.0581 45.4671 8.39784L45.4687 8.39941ZM31.0138 17.019C30.7598 16.3355 30.0465 15.8322 29.3316 15.7335C27.6023 15.5061 25.9671 15.9937 24.4291 16.4484C20.3059 17.8656 16.1309 19.2139 12.6238 22.1268C12.467 22.2742 12.3557 22.4827 12.4357 22.7116C12.5367 22.8721 12.6946 22.9886 12.8778 23.0377C16.839 24.2524 20.9526 24.8985 25.0955 24.9567C26.9846 25.1526 28.554 23.8514 29.5056 22.3385C30.3632 20.7111 31.3948 19.0368 31.0138 17.019Z" fill="#323232"/>
+														</svg>
+														Hyundai
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="catalog__filter_filter filter this--transmission">
+											<div class="filter__title">По коробке передач</div>
+											<div class="filter__body this--radio">
+												<div class="filter__radio">
+													<input type="radio" name="transmission" value="1" id="radio_7">
+													<label for="radio_7">Автомат</label>
+												</div>
+												<div class="filter__radio">
+													<input type="radio" name="transmission" value="1" id="radio_8">
+													<label for="radio_8">Механика</label>
+												</div>
+											</div>
+										</div>
+										<div class="catalog__filter_filter filter this--fuel">
+											<div class="filter__title">По типу топлива</div>
+											<div class="filter__body this--radio">
+												<div class="filter__radio">
+													<input type="radio" name="fuel" value="1" id="radio_9">
+													<label for="radio_9">Бензин</label>
+												</div>
+												<div class="filter__radio">
+													<input type="radio" name="fuel" value="1" id="radio_10">
+													<label for="radio_10">Дизель</label>
+												</div>
+												<div class="filter__radio">
+													<input type="radio" name="fuel" value="1" id="radio_11">
+													<label for="radio_11">Гибрид</label>
+												</div>
+												<div class="filter__radio">
+													<input type="radio" name="fuel" value="1" id="radio_12">
+													<label for="radio_12">Электро</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="catalog__right">
+								<div class="catalog__top">
+									<div class="catalog__dates_input text-input date_input">
+										<img src="./img/icons/picker.svg" alt="" class="date_input__img">
+										<input type="text" class="rental-calendar" placeholder="Выберите даты аренды" readonly>
+										<img src="./img/icons/arrow_down.svg" alt="" class="date_input__arrow">
+									</div>
+									<div class="catalog__sort">
+										<div class="catalog__sort_title">Сортировка</div>
+										<select class="catalog__sort_select select">
+											<option value="1">По популярности</option>
+											<option value="1">Дороже</option>
+											<option value="1">Дешевле</option>
+											<option value="1">По новизне</option>
+										</select>
+									</div>
+								</div>
+								<div class="catalog__items">
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Tesla model x</div>
+											<div class="catalog__item_subtitle">Купе</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_1.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Робот
+												</div>
+											</div>
+											<div class="catalog__item_price">20 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">BMW i4 m50 Gran</div>
+											<div class="catalog__item_subtitle">Купе</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_2.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">18 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Volkswagen ID.7</div>
+											<div class="catalog__item_subtitle">Купе</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_3.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">12 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Polestar 3</div>
+											<div class="catalog__item_subtitle">Седан</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_4.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">12 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Hyundai Ioniq 5 N</div>
+											<div class="catalog__item_subtitle">Кроссовер</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_5.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">15 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">nissan ARIYA</div>
+											<div class="catalog__item_subtitle">Кроссовер</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_6.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">12 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Lotus eletre</div>
+											<div class="catalog__item_subtitle">Кроссовер</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_7.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">12 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Volkswagen ID.7</div>
+											<div class="catalog__item_subtitle">Кроссовер</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_8.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">12 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Nissan GTR R35</div>
+											<div class="catalog__item_subtitle">Купе</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_9.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Робот
+												</div>
+											</div>
+											<div class="catalog__item_price">45 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">BMW i4</div>
+											<div class="catalog__item_subtitle">Седан</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_10.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">60 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Hyundai Ioniq 6</div>
+											<div class="catalog__item_subtitle">Седан</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_11.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													5
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">25 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Nissan Leaf</div>
+											<div class="catalog__item_subtitle">Хэтчбек</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_12.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													5
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">20 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Ford Mustang Mach-E</div>
+											<div class="catalog__item_subtitle">Кроссовер</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_13.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													5
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">35 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Audi Q4 e-tron</div>
+											<div class="catalog__item_subtitle">Кроссовер</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_14.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													5
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">55 000 ₽</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="catalog__item">
+										<div class="catalog__item_like">
+											<img src="./img/icons/Heart_empty.svg" alt="">
+										</div>
+										<div class="catalog__item_top">
+											<div class="catalog__item_title">Porsche Taycan</div>
+											<div class="catalog__item_subtitle">Седан</div>
+										</div>
+										<div class="catalog__item_img">
+											<img src="./img/catalog/car_15.png" alt="">
+										</div>
+										<div class="catalog__item_bottom">
+											<div class="catalog__item_bottom_group">
+												<div class="catalog__item_passengers">
+													<div class="catalog__item_passengers_img">
+														<img src="./img/icons/person.svg" alt="">
+													</div>
+													4
+												</div>
+												<div class="catalog__item_transmissions">
+													<div class="catalog__item_transmissions_img">
+														<img src="./img/icons/transmission.svg" alt="">
+													</div>
+													Автомат
+												</div>
+											</div>
+											<div class="catalog__item_price">120 000 ₽</div>
+										</div>
+									</a>
+								</div>
+								<div class="catalog__pagination">
+									<a href="#" class="catalog__pagination_prev">
+										<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11 3.5C11.2761 3.5 11.5 3.72386 11.5 4C11.5 4.27614 11.2761 4.5 11 4.5V4V3.5ZM0.646446 4.35355C0.451184 4.15829 0.451184 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM11 4V4.5H1V4V3.5H11V4Z" fill="#828282"/>
+										</svg>
+										назад</a>
+									<div class="catalog__pagination_links">
+										<a href="#" class="catalog__pagination_link">01</a>
+										<a href="#" class="catalog__pagination_link active">02</a>
+										<a href="#" class="catalog__pagination_link">03</a>
+									</div>
+									<a href="#" class="catalog__pagination_next">
+										Вперед
+										<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V4V3.5ZM11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645L8.17157 0.464466C7.97631 0.269204 7.65973 0.269204 7.46447 0.464466C7.2692 0.659728 7.2692 0.976311 7.46447 1.17157L10.2929 4L7.46447 6.82843C7.2692 7.02369 7.2692 7.34027 7.46447 7.53553C7.65973 7.7308 7.97631 7.7308 8.17157 7.53553L11.3536 4.35355ZM1 4V4.5H11V4V3.5H1V4Z" fill="#828282"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_faq section">
+				<div class="container">
+					<div class="main_faq__content">
+						<div class="main_faq__left">
+							<h2 class="main_faq__title h2_title">Часто задаваемые вопросы</h2>
+							<div class="main_faq__subtitle">Ответы на популярные вопросы об аренде автомобилей</div>
+							<div class="main_faq__block">
+								<div class="main_faq__block_title">Нужно ли оставлять залог при аренде?</div>
+								<div class="main_faq__block_text">
+									<p>Да, для аренды любого автомобиля предусмотрен залог. Его размер зависит от класса и модели машины:</p>
+									<ul>
+										<li>для городских авто — от 30 000 ₽,</li>
+										<li>для бизнес-класса и кроссоверов — от 80 000 ₽,</li>
+										<li>для спорткаров и премиальных моделей — от 150 000 ₽ и выше.</li>
+									</ul>
+									<p>Залог возвращается сразу после окончания аренды при условии отсутствия повреждений и нарушений договора.</p>
+								</div>
+							</div>
+						</div>
+						<div class="main_faq__right js_main_faq_accordions">
+							<div class="main_faq__accordion active js_main_faq_accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Сколько стоит аренда автомобиля?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body">
+									<div class="main_faq__accordion_body_content">Стоимость зависит от модели и срока аренды. Средняя цена начинается от 3 000 ₽ в день для городских авто и от 12 000 ₽ в день для премиум-класса и спорткаров.</div>
+								</div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Какие документы нужны для аренды?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Только паспорт и водительское удостоверение. Для премиум-авто может потребоваться залоговая сумма.</div></div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Есть ли ограничение по пробегу?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Для большинства автомобилей действует лимит — 200–300 км в сутки. Возможно оформление безлимитного тарифа.</div></div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Можно ли арендовать машину без водителя?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Да, все автомобили доступны как с водителем, так и без.</div></div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Что делать в случае поломки или ДТП?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Мы обеспечиваем круглосуточную поддержку и предоставляем подменный автомобиль.</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_form section">
+				<div class="container">
+					<div class="main_form__content">
+						<div class="main_form__left">
+							<h2 class="h2_title main_form__title">Остались вопросы</h2>
+							<div class="main_form__text">Заполните форму и наши менеджеры свяжутся с Вами в ближайшее время</div>
+							<form class="main_form__form">
+								<div class="main_form__form_row">
+									<div class="main_form__form_input text-input">
+										<input type="text" name="name" placeholder="Имя">
+									</div>
+									<div class="main_form__form_input text-input">
+										<input type="text" name="surname" placeholder="Фамилия">
+									</div>
+								</div>
+								<div class="main_form__form_row">
+									<div class="main_form__form_input text-input">
+										<input type="email" name="email" placeholder="Ваш Email">
+									</div>
+									<div class="main_form__form_input text-input">
+										<input type="tel" name="phone" class="js_input_tel" placeholder="+7 900 000 00 00">
+									</div>
+								</div>
+								<div class="main_form__form_textarea text-input this--textarea">
+									<textarea name="message" placeholder="Сообщение"></textarea>
+								</div>
+								<div class="main_form__form_checkbox checkbox">
+									<input type="checkbox" name="agree" id="main_agree">
+									<label for="main_agree">Заполните форму и наши менеджеры свяжутся с Вами в ближайшее время</label>
+								</div>
+								<input type="submit" class="main_form__form_submit btn this--primary" value="Отправить">
+							</form>
+						</div>
+						<div class="main_form__right">
+							<div class="main_form__img">
+								<img src="./img/main/main_form/car.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__content">
+					<div class="footer__top">
+						<div class="footer__top_left">
+							<div class="footer__logo">
+								<img src="./img/footer/logo.svg" alt="">
+							</div>
+							<div class="footer__top_text">Аренда автомобилей премиум-класса и электрокаров.
+								Быстрое оформление, прозрачные условия и поддержка 24/7.</div>
+							<form class="footer__form">
+								<div class="footer__form_input text-input">
+									<input type="email" name="email" placeholder="Email" class="footer__form_email">
+									<input type="submit" value="Подписаться" class="footer__form_submit btn this--primary">
+								</div>
+							</form>
+							<div class="footer__social">
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Facebook.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Twitter.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Instagram.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/linkedin.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/youtube.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">О нас</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Отзывы клиентов</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Информация о компании</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Услуги</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда электромобилей</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда спорткаров</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда бизнес-класса</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Долгосрочная аренда</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда с водителем</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Контакты</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Запросить расчёт стоимости</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Консультация</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Центр поддержки</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Условия аренды</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Политика конфиденциальности</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						Copyright © 2025 WROOM! RENTAL
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.inputmask.bundle.min.js"></script>
+	<script src="js/sumoSelect.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

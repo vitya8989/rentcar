@@ -1,0 +1,114 @@
+.detail_top__content {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.detail_top__left {
+  max-width: 576px;
+  width: calc(50% - 10px);
+}
+.detail_top__right {
+  width: calc(50% - 10px);
+}
+.detail_top__title {
+  margin-top: 26px;
+  font-size: 46px;
+}
+.detail_top__subtitle {
+  margin-top: 4px;
+  color: #646464;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.detail_top__rating {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.detail_top__rating_hearts {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.detail_top__rating_heart {
+  width: 12px;
+
+  img {
+    width: 100%;
+  }
+}
+.detail_top__rating_value,
+.detail_top__rating_count {
+  color: #646464;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.detail_top__prices {
+  margin-top: 26px;
+}
+.detail_top__old_price {
+  font-family: GolosText, sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -1px;
+  color: #828282;
+  text-decoration: line-through;
+  font-weight: 600;
+}
+.detail_top__price {
+  font-family: GolosText, sans-serif;
+  font-size: 34px;
+  line-height: 37px;
+  letter-spacing: -1px;
+  color: #323232;
+  font-weight: 600;
+}
+.detail_top__price_text {
+  margin-top: 5px;
+  color: #646464;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.detail_top__dates {
+  margin-top: 36px;
+}
+.detail_top__dates_title {
+  color: #646464;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.detail_top__dates_input {
+  margin-top: 14px;
+  max-width: 340px;
+}
+.detail_top__characteristics {
+  margin-top: 36px;
+}
+.detail_top__characteristics_title {
+  color: #646464;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.detail_top__characteristics_table {
+  margin-top: 14px;
+}
+.detail_top__link {
+  margin-top: 36px;
+  width: 327px;
+  height: 53px;
+}
+.detail_top__img {
+  position: relative;
+  padding-top: 111.449%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+  }
+}

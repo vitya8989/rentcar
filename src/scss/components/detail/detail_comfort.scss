@@ -1,0 +1,16 @@
+.detail_comfort__items {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.detail_comfort__item {
+  background: #ffffff;
+  box-shadow: 0 6px 13px 0 rgba(#000000, 0.03);
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-size: 20px;
+  line-height: 22px;
+  color: #828282;
+  letter-spacing: -1px;
+}

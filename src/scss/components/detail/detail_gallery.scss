@@ -1,0 +1,28 @@
+.detail_gallery__text {
+  margin-top: 14px;
+  color: #646464;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.detail_gallery__items {
+  margin-top: 40px;
+  gap: 30px;
+  display: flex;
+}
+.detail_gallery__item {
+  width: calc(50% - 15px);
+}
+.detail_gallery__img {
+  padding-top: 66.715%;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+}

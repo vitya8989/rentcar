@@ -1,0 +1,17 @@
+.detail_rent__table {
+  margin-top: 40px;
+
+  &.table {
+    &::before {
+      height: 90%;
+    }
+    .table__row {
+      &::before {
+        width: 100%;
+      }
+    }
+    .table__td {
+      padding: 14px 24px;
+    }
+  }
+}

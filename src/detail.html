@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Аренда автомобилей</title>
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/inputmask.css">
+	<link rel="stylesheet" href="css/sumoSelect.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__content">
+					<div class="header__left">
+						<a href="/" class="header__logo">
+							<img src="./img/header/logo.svg" alt="">
+						</a>
+						<nav class="header__nav">
+							<ul class="header__menu">
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Новые машины</a>
+								</li>
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Каталог</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">Отзывы</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">О компании</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__right">
+						<a href="/auth.html" class="header__link">
+							<img src="./img/header/lk.svg" alt="">
+						</a>
+						<a href="/catalog.html" class="header__btn btn this--secondary">Выбрать машину</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="detail">
+			<section class="detail_top section">
+				<div class="container">
+					<div class="detail_top__content">
+						<div class="detail_top__left">
+							<div class="detail_top__breadcrumbs breadcrumbs">
+								<a href="/catalog.html" class="breadcrumbs__link">Каталог</a>
+								<a href="/catalog.html" class="breadcrumbs__link">Спорткары</a>
+								<a href="/detail.html" class="breadcrumbs__link active">Porsche 911</a>
+							</div>
+							<h1 class="detail_top__title h2_title">Porsche 911</h1>
+							<div class="detail_top__subtitle">Легенда среди спорткаров</div>
+							<div class="detail_top__rating">
+								<div class="detail_top__rating_hearts">
+									<div class="detail_top__rating_heart">
+										<img src="./img/icons/Heart.svg" alt="">
+									</div>
+									<div class="detail_top__rating_heart">
+										<img src="./img/icons/Heart.svg" alt="">
+									</div>
+									<div class="detail_top__rating_heart">
+										<img src="./img/icons/Heart.svg" alt="">
+									</div>
+									<div class="detail_top__rating_heart">
+										<img src="./img/icons/Heart.svg" alt="">
+									</div>
+									<div class="detail_top__rating_heart">
+										<img src="./img/icons/Heart.svg" alt="">
+									</div>
+								</div>
+								<div class="detail_top__rating_value">5.0</div>
+								<div class="detail_top__rating_count">(24)</div>
+							</div>
+							<div class="detail_top__prices">
+								<div class="detail_top__old_price">32 000 ₽</div>
+								<div class="detail_top__price">от 28 000 ₽/ сутки</div>
+								<div class="detail_top__price_text">(зависит от срока аренды и условий)</div>
+							</div>
+							<div class="detail_top__dates">
+								<div class="detail_top__dates_input text-input date_input">
+									<img src="./img/icons/picker.svg" alt="" class="date_input__img">
+									<input type="text" class="rental-calendar" placeholder="Выберите даты аренды" readonly>
+									<img src="./img/icons/arrow_down.svg" alt="" class="date_input__arrow">
+								</div>
+							</div>
+							<div class="detail_top__characteristics">
+								<div class="detail_top__characteristics_title">Основные характеристики</div>
+								<div class="detail_top__characteristics_table table">
+									<div class="table__row">
+										<div class="table__td">Кузов</div>
+										<div class="table__td this--bold">Купе</div>
+									</div>
+									<div class="table__row">
+										<div class="table__td">Количество мест</div>
+										<div class="table__td this--bold">4 (2+2)</div>
+									</div>
+									<div class="table__row">
+										<div class="table__td">Дверей</div>
+										<div class="table__td this--bold">2</div>
+									</div>
+									<div class="table__row">
+										<div class="table__td">Багажник</div>
+										<div class="table__td this--bold">
+											<div>
+												компактный<br>
+												<span>(подходит для дорожной сумки)</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="/cart.html" class="detail_top__link btn this--primary">Забронировать</a>
+						</div>
+						<div class="detail_top__right">
+							<div class="detail_top__img">
+								<img src="./img/detail/detail_top/car.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="detail_parameters section">
+				<div class="container">
+					<div class="detail_parameters__content">
+						<h2 class="detail_parameters__title h2_title">
+							Технические параметры
+						</h2>
+						<div class="detail_parameters__items">
+							<div class="detail_parameters__item this--3">
+								<div class="detail_parameters__item_top">
+									<div class="detail_parameters__item_icon">
+										<img src="./img/detail/detail_parameters/icon_1.svg" alt="">
+									</div>
+									Двигатель
+								</div>
+								<div class="detail_parameters__item_bottom">3.0L Twin-Turbo Boxer 6</div>
+							</div>
+							<div class="detail_parameters__item this--3">
+								<div class="detail_parameters__item_top">
+									<div class="detail_parameters__item_icon">
+										<img src="./img/detail/detail_parameters/icon_2.svg" alt="">
+									</div>
+									Мощность
+								</div>
+								<div class="detail_parameters__item_bottom">450 л.с.</div>
+							</div>
+							<div class="detail_parameters__item this--3">
+								<div class="detail_parameters__item_top">
+									<div class="detail_parameters__item_icon">
+										<img src="./img/detail/detail_parameters/icon_3.svg" alt="">
+									</div>
+									Разгон
+								</div>
+								<div class="detail_parameters__item_bottom">0–100 км/ч<br>
+									3,5 сек</div>
+							</div>
+							<div class="detail_parameters__item">
+								<div class="detail_parameters__item_top">
+									<div class="detail_parameters__item_icon">
+										<img src="./img/detail/detail_parameters/icon_4.svg" alt="">
+									</div>
+									Максимальная скорость
+								</div>
+								<div class="detail_parameters__item_bottom">308 км/ч</div>
+							</div>
+							<div class="detail_parameters__item">
+								<div class="detail_parameters__item_top">
+									<div class="detail_parameters__item_icon">
+										<img src="./img/detail/detail_parameters/icon_5.svg" alt="">
+									</div>
+									Привод
+								</div>
+								<div class="detail_parameters__item_bottom">задний</div>
+							</div>
+							<div class="detail_parameters__item">
+								<div class="detail_parameters__item_top">
+									<div class="detail_parameters__item_icon">
+										<img src="./img/detail/detail_parameters/icon_6.svg" alt="">
+									</div>
+									Трансмиссия
+								</div>
+								<div class="detail_parameters__item_bottom">8-ступенчатая PDK (робот)</div>
+							</div>
+							<div class="detail_parameters__item">
+								<div class="detail_parameters__item_top">
+									<div class="detail_parameters__item_icon">
+										<img src="./img/detail/detail_parameters/icon_7.svg" alt="">
+									</div>
+									Средний расход
+								</div>
+								<div class="detail_parameters__item_bottom">~10–11 л/100 км</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="detail_comfort section">
+				<div class="container">
+					<div class="detail_comfort__content">
+						<h2 class="detail_comfort__title h2_title">Оснащение и комфорт</h2>
+						<div class="detail_comfort__items">
+							<div class="detail_comfort__item">Кожаный салон премиум-класса</div>
+							<div class="detail_comfort__item">Спортивные сиденья с подогревом и вентиляцией</div>
+							<div class="detail_comfort__item">Двухзонный климат-контроль</div>
+							<div class="detail_comfort__item">Мультимедиа: Apple CarPlay, Android Auto, Bluetooth</div>
+							<div class="detail_comfort__item">Премиальная акустика Bose / Burmester</div>
+							<div class="detail_comfort__item">Премиальная акустика Bose / Burmester</div>
+							<div class="detail_comfort__item">Камера заднего вида</div>
+							<div class="detail_comfort__item">Парктроники</div>
+							<div class="detail_comfort__item">Круиз-контроль</div>
+							<div class="detail_comfort__item">Спортивный режим Sport Chrono</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="detail_rent section">
+				<div class="container">
+					<div class="detail_rent__content">
+						<h2 class="detail_rent h2_title">Условия аренды</h2>
+						<div class="detail_rent__table table">
+							<div class="table__row">
+								<div class="table__td">Минимальный срок аренды</div>
+								<div class="table__td this--bold">от 1 суток</div>
+							</div>
+							<div class="table__row">
+								<div class="table__td">Возраст арендатора</div>
+								<div class="table__td this--bold">от 25 лет</div>
+							</div>
+							<div class="table__row">
+								<div class="table__td">Стаж вождения</div>
+								<div class="table__td this--bold">от 3-х лет</div>
+							</div>
+							<div class="table__row">
+								<div class="table__td">Залог</div>
+								<div class="table__td this--bold">200 000 ₽ (возвращается при возврате авто)</div>
+							</div>
+							<div class="table__row">
+								<div class="table__td">Пробег включен</div>
+								<div class="table__td this--bold">200 км/сутки</div>
+							</div>
+							<div class="table__row">
+								<div class="table__td">Доп. км</div>
+								<div class="table__td this--bold">3 000 ₽ за 1 км</div>
+							</div>
+							<div class="table__row">
+								<div class="table__td">Страховка</div>
+								<div class="table__td this--bold">ОСАГО + КАСКО с франшизой</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="detail_additional section">
+				<div class="container">
+					<div class="detail_additional__content">
+						<h2 class="detail_additional__title h2_title">Дополнительные услуги и аксессуары</h2>
+						<div class="detail_additional__text">Чтобы воспользоваться дополнительными услугами, достаточно<br> сообщить об этом нашему менеджеру по телефону.</div>
+						<div class="detail_comfort__items">
+							<div class="detail_comfort__item">Доставка авто в аэропорт, отель или по адресу</div>
+							<div class="detail_comfort__item">Возможность возврата в другом месте</div>
+							<div class="detail_comfort__item">Аренда с профессиональным водителем</div>
+							<div class="detail_comfort__item">Детское кресло</div>
+							<div class="detail_comfort__item">Держатель для телефона</div>
+					</div>
+				</div>
+			</section>
+			<section class="detail_gallery section">
+				<div class="container">
+					<div class="detail_gallery__content">
+						<h2 class="detail_gallery__title h2_title">Галерея</h2>
+						<div class="detail_gallery__text">Porsche 911 — это не просто автомобиль, а символ скорости, стиля и удовольствия от вождения.<br> Каждая поездка превращается в событие, а внимание окружающих гарантировано.</div>
+						<div class="detail_gallery__items">
+							<div class="detail_gallery__item">
+								<div class="detail_gallery__img">
+									<img src="./img/detail/detail_gallery/car_1.jpg" alt="">
+								</div>
+							</div>
+							<div class="detail_gallery__item">
+								<div class="detail_gallery__img">
+									<img src="./img/detail/detail_gallery/car_2.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_why section">
+				<div class="container">
+					<div class="main_why__content">
+						<div class="main_why__top">
+							<h2 class="main_why__title h2_title">Почему<br> выбирают нас</h2>
+							<div class="main_why__group">
+								<div class="main_why__text">Аренда автомобилей премиум-класса
+									и электрокаров на лучших условиях</div>
+								<a href="/catalog.html" class="btn this--primary main_why__link">Каталог машин</a>
+							</div>
+						</div>
+						<div class="main_why__items">
+							<div class="main_why__item">
+								<div class="main_why__item_img">
+									<img src="./img/main/main_why/icon_1.svg" alt="">
+								</div>
+								<h4 class="main_why__item_title">Прозрачные условия</h4>
+								<div class="main_why__item_text">Никаких скрытых платежей и навязанных услуг — вы сразу знаете итоговую стоимость.</div>
+							</div>
+							<div class="main_why__item">
+								<div class="main_why__item_img">
+									<img src="./img/main/main_why/icon_2.svg" alt="">
+								</div>
+								<h4 class="main_why__item_title">Большой выбор авто</h4>
+								<div class="main_why__item_text">От электромобилей до спорткаров — подберём машину под ваш стиль и задачу.</div>
+							</div>
+							<div class="main_why__item">
+								<div class="main_why__item_img">
+									<img src="./img/main/main_why/icon_3.svg" alt="">
+								</div>
+								<h4 class="main_why__item_title">Быстрое оформление</h4>
+								<div class="main_why__item_text">Онлайн-бронирование за 5 минут. Минимум документов — максимум удобства.</div>
+							</div>
+							<div class="main_why__item">
+								<div class="main_why__item_img">
+									<img src="./img/main/main_why/icon_4.svg" alt="">
+								</div>
+								<h4 class="main_why__item_title">Поддержка 24/7</h4>
+								<div class="main_why__item_text">Мы всегда на связи: помощь на дороге, консультации и сопровождение аренды.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_reviews section">
+				<div class="container">
+					<div class="main_reviews__content">
+						<h2 class="h2_title main_reviews__title">Что думают про нас?</h2>
+						<div class="main_reviews__text">Нам доверяют</div>
+						<div class="main_reviews__items">
+							<div class="main_reviews__item">
+								<div class="main_reviews__item_icon">
+									<img src="./img/icons/review.svg" alt="">
+								</div>
+								<div class="main_reviews__item_body">
+									<div class="main_reviews__item_top">
+										<div class="main_reviews__item_group">
+											<div class="main_reviews__item_title">Алексей П.</div>
+											<div class="main_reviews__item_subtitle">Бизнесмен</div>
+										</div>
+										<div class="main_reviews__item_hearts">
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="main_reviews__item_text">Арендовал Porsche 911 на выходные. Машина в идеальном состоянии, оформление заняло всего 10 минут. Всё прозрачно и без скрытых платежей. Обязательно обращусь снова!</div>
+								</div>
+							</div>
+							<div class="main_reviews__item this--reverse">
+								<div class="main_reviews__item_icon">
+									<img src="./img/icons/review.svg" alt="">
+								</div>
+								<div class="main_reviews__item_body">
+									<div class="main_reviews__item_top">
+										<div class="main_reviews__item_group">
+											<div class="main_reviews__item_title">Мария К.</div>
+											<div class="main_reviews__item_subtitle">Маркетолог</div>
+										</div>
+										<div class="main_reviews__item_hearts">
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="main_reviews__item_text">Очень понравился сервис! Брала Tesla Model X на неделю. Поддержка на связи 24/7, все вопросы решали быстро. Отличный опыт, рекомендую друзьям.</div>
+								</div>
+							</div>
+							<div class="main_reviews__item">
+								<div class="main_reviews__item_icon">
+									<img src="./img/icons/review.svg" alt="">
+								</div>
+								<div class="main_reviews__item_body">
+									<div class="main_reviews__item_top">
+										<div class="main_reviews__item_group">
+											<div class="main_reviews__item_title">Игорь С.</div>
+											<div class="main_reviews__item_subtitle">IT-специалист</div>
+										</div>
+										<div class="main_reviews__item_hearts">
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="main_reviews__item_text">Арендовал BMW i4 для деловой поездки. Комфортный авто, всё чётко по договору. Залог вернули сразу после сдачи. Приятно удивлён уровнем сервиса.</div>
+								</div>
+							</div>
+						</div>
+						<div class="main_reviews__link_wr">
+							<a href="https://yandex.ru" target="_blank" class="main_reviews__link btn this--secondary">яндекс отзывы</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_faq section">
+				<div class="container">
+					<div class="main_faq__content">
+						<div class="main_faq__left">
+							<h2 class="main_faq__title h2_title">Часто задаваемые вопросы</h2>
+							<div class="main_faq__subtitle">Ответы на популярные вопросы об аренде автомобилей</div>
+							<div class="main_faq__block">
+								<div class="main_faq__block_title">Нужно ли оставлять залог при аренде?</div>
+								<div class="main_faq__block_text">
+									<p>Да, для аренды любого автомобиля предусмотрен залог. Его размер зависит от класса и модели машины:</p>
+									<ul>
+										<li>для городских авто — от 30 000 ₽,</li>
+										<li>для бизнес-класса и кроссоверов — от 80 000 ₽,</li>
+										<li>для спорткаров и премиальных моделей — от 150 000 ₽ и выше.</li>
+									</ul>
+									<p>Залог возвращается сразу после окончания аренды при условии отсутствия повреждений и нарушений договора.</p>
+								</div>
+							</div>
+						</div>
+						<div class="main_faq__right js_main_faq_accordions">
+							<div class="main_faq__accordion active js_main_faq_accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Сколько стоит аренда автомобиля?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body">
+									<div class="main_faq__accordion_body_content">Стоимость зависит от модели и срока аренды. Средняя цена начинается от 3 000 ₽ в день для городских авто и от 12 000 ₽ в день для премиум-класса и спорткаров.</div>
+								</div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Какие документы нужны для аренды?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Только паспорт и водительское удостоверение. Для премиум-авто может потребоваться залоговая сумма.</div></div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Есть ли ограничение по пробегу?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Для большинства автомобилей действует лимит — 200–300 км в сутки. Возможно оформление безлимитного тарифа.</div></div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Можно ли арендовать машину без водителя?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Да, все автомобили доступны как с водителем, так и без.</div></div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Что делать в случае поломки или ДТП?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Мы обеспечиваем круглосуточную поддержку и предоставляем подменный автомобиль.</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_form section">
+				<div class="container">
+					<div class="main_form__content">
+						<div class="main_form__left">
+							<h2 class="h2_title main_form__title">Остались вопросы</h2>
+							<div class="main_form__text">Заполните форму и наши менеджеры свяжутся с Вами в ближайшее время</div>
+							<form class="main_form__form">
+								<div class="main_form__form_row">
+									<div class="main_form__form_input text-input">
+										<input type="text" name="name" placeholder="Имя">
+									</div>
+									<div class="main_form__form_input text-input">
+										<input type="text" name="surname" placeholder="Фамилия">
+									</div>
+								</div>
+								<div class="main_form__form_row">
+									<div class="main_form__form_input text-input">
+										<input type="email" name="email" placeholder="Ваш Email">
+									</div>
+									<div class="main_form__form_input text-input">
+										<input type="tel" name="phone" class="js_input_tel" placeholder="+7 900 000 00 00">
+									</div>
+								</div>
+								<div class="main_form__form_textarea text-input this--textarea">
+									<textarea name="message" placeholder="Сообщение"></textarea>
+								</div>
+								<div class="main_form__form_checkbox checkbox">
+									<input type="checkbox" name="agree" id="main_agree">
+									<label for="main_agree">Заполните форму и наши менеджеры свяжутся с Вами в ближайшее время</label>
+								</div>
+								<input type="submit" class="main_form__form_submit btn this--primary" value="Отправить">
+							</form>
+						</div>
+						<div class="main_form__right">
+							<div class="main_form__img">
+								<img src="./img/main/main_form/car.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__content">
+					<div class="footer__top">
+						<div class="footer__top_left">
+							<div class="footer__logo">
+								<img src="./img/footer/logo.svg" alt="">
+							</div>
+							<div class="footer__top_text">Аренда автомобилей премиум-класса и электрокаров.
+								Быстрое оформление, прозрачные условия и поддержка 24/7.</div>
+							<form class="footer__form">
+								<div class="footer__form_input text-input">
+									<input type="email" name="email" placeholder="Email" class="footer__form_email">
+									<input type="submit" value="Подписаться" class="footer__form_submit btn this--primary">
+								</div>
+							</form>
+							<div class="footer__social">
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Facebook.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Twitter.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Instagram.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/linkedin.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/youtube.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">О нас</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Отзывы клиентов</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Информация о компании</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Услуги</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда электромобилей</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда спорткаров</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда бизнес-класса</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Долгосрочная аренда</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда с водителем</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Контакты</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Запросить расчёт стоимости</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Консультация</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Центр поддержки</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Условия аренды</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Политика конфиденциальности</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						Copyright © 2025 WROOM! RENTAL
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.inputmask.bundle.min.js"></script>
+	<script src="js/sumoSelect.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

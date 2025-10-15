@@ -1,0 +1,38 @@
+.about__title {
+  font-size: 42px;
+  font-family: GolosText, sans-serif;
+  font-weight: 600;
+  color: #323232;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+.about__body {
+  margin-top: 60px;
+  display: flex;
+  gap: 80px;
+}
+.about__left,
+.about__right {
+  width: calc(50% - 40px);
+
+  p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #646464;
+    line-height: 1.4;
+  }
+}
+.about__map_wr {
+  position: relative;
+  padding-top: 105%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.about__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Аренда автомобилей</title>
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/inputmask.css">
+	<link rel="stylesheet" href="css/sumoSelect.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__content">
+					<div class="header__left">
+						<a href="/" class="header__logo">
+							<img src="./img/header/logo.svg" alt="">
+						</a>
+						<nav class="header__nav">
+							<ul class="header__menu">
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Новые машины</a>
+								</li>
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Каталог</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">Отзывы</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">О компании</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__right">
+						<a href="/auth.html" class="header__link">
+							<img src="./img/header/lk.svg" alt="">
+						</a>
+						<a href="/catalog.html" class="header__btn btn this--secondary">Выбрать машину</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="main_top section">
+				<div class="container">
+					<div class="main_top__content">
+						<h1 class="main_top__title h1_title">Аренда автомобилей в Москве</h1>
+						<div class="main_top__slider_wr">
+							<div class="main_top__slider main_top_slider swiper-container js_main_top_slider">
+								<div class="main_top_slider__wrappper swiper-wrapper">
+									<div class="main_top_slider__slide swiper-slide">
+										<div class="main_top_slider__item main_top_slider_item">
+											<img class="main_top_slider_item__img" src="./img/main/main_top/porche.jpg" alt="">
+											<div class="main_top_slider_item__content">
+												<h3 class="main_top_slider_item__title">Прокат Porsche 911 – легенда скорости в твоих руках</h3>
+												<div class="main_top_slider_item__text">Классический спортивный автомобиль для тех, кто ценит драйв, стиль и престиж. Арендуйте легенду и получите максимум эмоций от каждой поездки.</div>
+												<div class="main_top_slider_item__prices">
+													<div class="main_top_slider_item__old_price">32 000 ₽</div>
+													<div class="main_top_slider_item__price">от 28 000 ₽/ сутки</div>
+												</div>
+												<a href="/detail.html" class="main_top_slider_item__btn btn this--primary">Забронировать</a>
+											</div>
+										</div>
+									</div>
+									<div class="main_top_slider__slide swiper-slide">
+										<div class="main_top_slider__item main_top_slider_item">
+											<img class="main_top_slider_item__img" src="./img/main/main_top/tesla.jpg" alt="">
+											<div class="main_top_slider_item__content">
+												<h3 class="main_top_slider_item__title">Аренда Tesla Model X
+													будущее уже сегодня</h3>
+												<div class="main_top_slider_item__text">Электрический кроссовер с запасом хода до 560 км, автопилотом и просторным салоном станет отличным выбором для деловых поездок. Почувствуйте технологичность и динамику без компромиссов.</div>
+												<div class="main_top_slider_item__prices">
+													<div class="main_top_slider_item__old_price">24 000 ₽</div>
+													<div class="main_top_slider_item__price">от 19 000 ₽/ сутки</div>
+												</div>
+												<a href="/detail.html" class="main_top_slider_item__btn btn this--primary">Забронировать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main_top__slider_bottom">
+								<div class="main_top__slider_links">
+									<a href="/catalog.html" class="main_top__slider_link">
+										<img src="./img/icons/tesla.svg" alt="">
+									</a>
+									<a href="/catalog.html" class="main_top__slider_link">
+										<img src="./img/icons/BMW.svg" alt="">
+									</a>
+									<a href="/catalog.html" class="main_top__slider_link">
+										<img src="./img/icons/vw.svg" alt="">
+									</a>
+									<a href="/catalog.html" class="main_top__slider_link">
+										<img src="./img/icons/brand_4.png" alt="">
+									</a>
+									<a href="/catalog.html" class="main_top__slider_link">
+										<img src="./img/icons/kia.svg" alt="">
+									</a>
+									<a href="/catalog.html" class="main_top__slider_link">
+										<img src="./img/icons/lotus.svg" alt="">
+									</a>
+									<a href="/catalog.html" class="main_top__slider_link">
+										<img src="./img/icons/nissan.svg" alt="">
+									</a>
+									<a href="/catalog.html" class="main_top__slider_link">
+										<img src="./img/icons/Hyundai.svg" alt="">
+									</a>
+								</div>
+								<div class="main_top__slider_arrows">
+									<div class="main_top__slider_arrow this--prev js_main_top__slider_arrow_prev">
+										<img src="./img/icons/arrow_right.svg" alt="">
+									</div>
+									<div class="main_top__slider_arrow this--next js_main_top__slider_arrow_next">
+										<img src="./img/icons/arrow_right.svg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_electric section">
+				<div class="container">
+					<div class="main_electric__content">
+						<div class="main_electric__top">
+							<div class="main_electric__top_group">
+								<h2 class="main_electric__title h2_title">Специальная подборка электричек</h2>
+								<div class="main_electric__text">Выбирайте стиль и технологии будущего уже сегодня</div>
+							</div>
+							<div class="main_electric__arrows">
+								<div class="main_electric__arrow this--prev js_main_electric__arrow_prev">
+									<img src="./img/icons/arrow_right.svg" alt="">
+								</div>
+								<div class="main_electric__arrow this--next js_main_electric__arrow_next">
+									<img src="./img/icons/arrow_right.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="main_electric__slider main_electric_slider swiper-container js_main_electric_slider">
+							<div class="main_electric_slider__wrapper swiper-wrapper">
+								<div class="main_electric_slider__slide swiper-slide">
+									<a href="/detail.html" class="main_electric__item">
+										<img src="./img/main/main_electric/tesla.jpg" alt="" class="main_electric__item_img">
+										<div class="main_electric__item_top">
+											<div class="main_electric__item_name">Tesla model x</div>
+											<div class="main_electric__item_price">от 20 000 ₽</div>
+										</div>
+										<div class="main_electric__item_bottom">
+											<div class="main_electric__item_logo">
+												<img src="./img/icons/tesla.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="main_electric_slider__slide swiper-slide">
+									<a href="/detail.html" class="main_electric__item">
+										<img src="./img/main/main_electric/bmw.jpg" alt="" class="main_electric__item_img">
+										<div class="main_electric__item_top">
+											<div class="main_electric__item_name">BMW i4 m50 Gran coupe</div>
+											<div class="main_electric__item_price">от 18 000 ₽</div>
+										</div>
+										<div class="main_electric__item_bottom">
+											<div class="main_electric__item_logo">
+												<img src="./img/icons/BMW_color.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="main_electric_slider__slide swiper-slide">
+									<a href="/detail.html" class="main_electric__item">
+										<img src="./img/main/main_electric/vw.jpg" alt="" class="main_electric__item_img">
+										<div class="main_electric__item_top">
+											<div class="main_electric__item_name">Volkswagen ID.7</div>
+											<div class="main_electric__item_price">от 12 000 ₽</div>
+										</div>
+										<div class="main_electric__item_bottom">
+											<div class="main_electric__item_logo">
+												<img src="./img/icons/vw.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="main_electric_slider__slide swiper-slide">
+									<a href="/detail.html" class="main_electric__item">
+										<img src="./img/main/main_electric/tesla.jpg" alt="" class="main_electric__item_img">
+										<div class="main_electric__item_top">
+											<div class="main_electric__item_name">Tesla model x</div>
+											<div class="main_electric__item_price">от 20 000 ₽</div>
+										</div>
+										<div class="main_electric__item_bottom">
+											<div class="main_electric__item_logo">
+												<img src="./img/icons/tesla.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="main_electric_slider__slide swiper-slide">
+									<a href="/detail.html" class="main_electric__item">
+										<img src="./img/main/main_electric/bmw.jpg" alt="" class="main_electric__item_img">
+										<div class="main_electric__item_top">
+											<div class="main_electric__item_name">BMW i4 m50 Gran coupe</div>
+											<div class="main_electric__item_price">от 18 000 ₽</div>
+										</div>
+										<div class="main_electric__item_bottom">
+											<div class="main_electric__item_logo">
+												<img src="./img/icons/BMW_color.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="main_electric_slider__slide swiper-slide">
+									<a href="/detail.html" class="main_electric__item">
+										<img src="./img/main/main_electric/vw.jpg" alt="" class="main_electric__item_img">
+										<div class="main_electric__item_top">
+											<div class="main_electric__item_name">Volkswagen ID.7</div>
+											<div class="main_electric__item_price">от 12 000 ₽</div>
+										</div>
+										<div class="main_electric__item_bottom">
+											<div class="main_electric__item_logo">
+												<img src="./img/icons/vw.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_popular section">
+				<div class="container">
+					<div class="main_popular__content">
+						<h2 class="main_popular__title h2_title">Популярные категории авто</h2>
+						<div class="main_popular__text">Все популярные категории авто в одном месте</div>
+						<div class="main_popular__tabs">
+							<div class="main_popular__tabs_links">
+								<div class="main_popular__tabs_link js_main_popular_tabs_link active" data-tab="1">Электромобили</div>
+								<div class="main_popular__tabs_link js_main_popular_tabs_link" data-tab="2">Седаны</div>
+								<div class="main_popular__tabs_link js_main_popular_tabs_link" data-tab="3">Купе</div>
+								<div class="main_popular__tabs_link js_main_popular_tabs_link" data-tab="4">Хэтчбеки</div>
+								<div class="main_popular__tabs_link js_main_popular_tabs_link" data-tab="5">Кроссоверы</div>
+							</div>
+							<div class="main_popular__tabs_bodies">
+								<div class="main_popular__tabs_body active js_main_popular_tabs_body" data-tab="1">
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_1.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Tesla model x</div>
+											<div class="main_popular__card_price">от 20 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/tesla.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_2.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">BMW i4 m50 Gran coupe</div>
+											<div class="main_popular__card_price">от 18 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/BMW_color.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_3.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Volkswagen ID.7</div>
+											<div class="main_popular__card_price">от 12 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/vw.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_4.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Polestar 3</div>
+											<div class="main_popular__card_price">от 12 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/brand_4.png" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_5.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Hyundai Ioniq 5 N</div>
+											<div class="main_popular__card_price">от 15 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/Hyundai.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_6.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">nissan ARIYA</div>
+											<div class="main_popular__card_price">от 12 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/nissan.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_7.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Lotus eletre</div>
+											<div class="main_popular__card_price">от 30 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/lotus.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_8.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Kia EV6</div>
+											<div class="main_popular__card_price">от 10 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/kia.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="main_popular__tabs_body js_main_popular_tabs_body" data-tab="2">
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_1.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Tesla model x</div>
+											<div class="main_popular__card_price">от 20 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/tesla.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_2.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">BMW i4 m50 Gran coupe</div>
+											<div class="main_popular__card_price">от 18 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/BMW_color.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_3.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Volkswagen ID.7</div>
+											<div class="main_popular__card_price">от 12 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/vw.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_4.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Polestar 3</div>
+											<div class="main_popular__card_price">от 12 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/brand_4.png" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="main_popular__tabs_body js_main_popular_tabs_body" data-tab="3">
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_1.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Tesla model x</div>
+											<div class="main_popular__card_price">от 20 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/tesla.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_2.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">BMW i4 m50 Gran coupe</div>
+											<div class="main_popular__card_price">от 18 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/BMW_color.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="main_popular__tabs_body js_main_popular_tabs_body" data-tab="4">
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_5.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Hyundai Ioniq 5 N</div>
+											<div class="main_popular__card_price">от 15 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/Hyundai.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_6.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">nissan ARIYA</div>
+											<div class="main_popular__card_price">от 12 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/nissan.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_7.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Lotus eletre</div>
+											<div class="main_popular__card_price">от 30 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/lotus.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_8.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Kia EV6</div>
+											<div class="main_popular__card_price">от 10 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/kia.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="main_popular__tabs_body js_main_popular_tabs_body" data-tab="5">
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_5.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">Hyundai Ioniq 5 N</div>
+											<div class="main_popular__card_price">от 15 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/Hyundai.svg" alt="">
+											</div>
+										</div>
+									</a>
+									<a href="/detail.html" class="main_popular__card">
+										<img src="./img/main/main_popular/card_6.jpg" alt="" class="main_popular__card_img">
+										<div class="main_popular__card_top">
+											<div class="main_popular__card_name">nissan ARIYA</div>
+											<div class="main_popular__card_price">от 12 000 ₽</div>
+										</div>
+										<div class="main_popular__card_bottom">
+											<div class="main_popular__card_logo">
+												<img src="./img/icons/nissan.svg" alt="">
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_why section">
+				<div class="container">
+					<div class="main_why__content">
+						<div class="main_why__top">
+							<h2 class="main_why__title h2_title">Почему<br> выбирают нас</h2>
+							<div class="main_why__group">
+								<div class="main_why__text">Аренда автомобилей премиум-класса
+									и электрокаров на лучших условиях</div>
+								<a href="/catalog.html" class="btn this--primary main_why__link">Каталог машин</a>
+							</div>
+						</div>
+						<div class="main_why__items">
+							<div class="main_why__item">
+								<div class="main_why__item_img">
+									<img src="./img/main/main_why/icon_1.svg" alt="">
+								</div>
+								<h4 class="main_why__item_title">Прозрачные условия</h4>
+								<div class="main_why__item_text">Никаких скрытых платежей и навязанных услуг — вы сразу знаете итоговую стоимость.</div>
+							</div>
+							<div class="main_why__item">
+								<div class="main_why__item_img">
+									<img src="./img/main/main_why/icon_2.svg" alt="">
+								</div>
+								<h4 class="main_why__item_title">Большой выбор авто</h4>
+								<div class="main_why__item_text">От электромобилей до спорткаров — подберём машину под ваш стиль и задачу.</div>
+							</div>
+							<div class="main_why__item">
+								<div class="main_why__item_img">
+									<img src="./img/main/main_why/icon_3.svg" alt="">
+								</div>
+								<h4 class="main_why__item_title">Быстрое оформление</h4>
+								<div class="main_why__item_text">Онлайн-бронирование за 5 минут. Минимум документов — максимум удобства.</div>
+							</div>
+							<div class="main_why__item">
+								<div class="main_why__item_img">
+									<img src="./img/main/main_why/icon_4.svg" alt="">
+								</div>
+								<h4 class="main_why__item_title">Поддержка 24/7</h4>
+								<div class="main_why__item_text">Мы всегда на связи: помощь на дороге, консультации и сопровождение аренды.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_reviews section">
+				<div class="container">
+					<div class="main_reviews__content">
+						<h2 class="h2_title main_reviews__title">Что думают про нас?</h2>
+						<div class="main_reviews__text">Нам доверяют</div>
+						<div class="main_reviews__items">
+							<div class="main_reviews__item">
+								<div class="main_reviews__item_icon">
+									<img src="./img/icons/review.svg" alt="">
+								</div>
+								<div class="main_reviews__item_body">
+									<div class="main_reviews__item_top">
+										<div class="main_reviews__item_group">
+											<div class="main_reviews__item_title">Алексей П.</div>
+											<div class="main_reviews__item_subtitle">Бизнесмен</div>
+										</div>
+										<div class="main_reviews__item_hearts">
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="main_reviews__item_text">Арендовал Porsche 911 на выходные. Машина в идеальном состоянии, оформление заняло всего 10 минут. Всё прозрачно и без скрытых платежей. Обязательно обращусь снова!</div>
+								</div>
+							</div>
+							<div class="main_reviews__item this--reverse">
+								<div class="main_reviews__item_icon">
+									<img src="./img/icons/review.svg" alt="">
+								</div>
+								<div class="main_reviews__item_body">
+									<div class="main_reviews__item_top">
+										<div class="main_reviews__item_group">
+											<div class="main_reviews__item_title">Мария К.</div>
+											<div class="main_reviews__item_subtitle">Маркетолог</div>
+										</div>
+										<div class="main_reviews__item_hearts">
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="main_reviews__item_text">Очень понравился сервис! Брала Tesla Model X на неделю. Поддержка на связи 24/7, все вопросы решали быстро. Отличный опыт, рекомендую друзьям.</div>
+								</div>
+							</div>
+							<div class="main_reviews__item">
+								<div class="main_reviews__item_icon">
+									<img src="./img/icons/review.svg" alt="">
+								</div>
+								<div class="main_reviews__item_body">
+									<div class="main_reviews__item_top">
+										<div class="main_reviews__item_group">
+											<div class="main_reviews__item_title">Игорь С.</div>
+											<div class="main_reviews__item_subtitle">IT-специалист</div>
+										</div>
+										<div class="main_reviews__item_hearts">
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+											<div class="main_reviews__item_heart">
+												<img src="./img/icons/Heart.svg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="main_reviews__item_text">Арендовал BMW i4 для деловой поездки. Комфортный авто, всё чётко по договору. Залог вернули сразу после сдачи. Приятно удивлён уровнем сервиса.</div>
+								</div>
+							</div>
+						</div>
+						<div class="main_reviews__link_wr">
+							<a href="https://yandex.ru" target="_blank" class="main_reviews__link btn this--secondary">яндекс отзывы</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_banner section">
+				<div class="container">
+					<div class="main_banner__content">
+						<img src="./img/main/main_banner/car.png" alt="" class="main_banner__img">
+						<div class="main_banner__body">
+							<div class="main_banner__top">
+								<h2 class="main_banner__title h2_title">Арендуй авто мечты прямо сейчас</h2>
+								<div class="main_banner__text">Выбирай из десятков моделей – от электрокаров до спорткаров. Драйв, комфорт и престиж ждут тебя.</div>
+							</div>
+							<a href="/catalog.html" class="main_banner__link btn this--wh">Выбрать машину</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_faq section">
+				<div class="container">
+					<div class="main_faq__content">
+						<div class="main_faq__left">
+							<h2 class="main_faq__title h2_title">Часто задаваемые вопросы</h2>
+							<div class="main_faq__subtitle">Ответы на популярные вопросы об аренде автомобилей</div>
+							<div class="main_faq__block">
+								<div class="main_faq__block_title">Нужно ли оставлять залог при аренде?</div>
+								<div class="main_faq__block_text">
+									<p>Да, для аренды любого автомобиля предусмотрен залог. Его размер зависит от класса и модели машины:</p>
+									<ul>
+										<li>для городских авто — от 30 000 ₽,</li>
+										<li>для бизнес-класса и кроссоверов — от 80 000 ₽,</li>
+										<li>для спорткаров и премиальных моделей — от 150 000 ₽ и выше.</li>
+									</ul>
+									<p>Залог возвращается сразу после окончания аренды при условии отсутствия повреждений и нарушений договора.</p>
+								</div>
+							</div>
+						</div>
+						<div class="main_faq__right js_main_faq_accordions">
+							<div class="main_faq__accordion active js_main_faq_accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Сколько стоит аренда автомобиля?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body">
+									<div class="main_faq__accordion_body_content">Стоимость зависит от модели и срока аренды. Средняя цена начинается от 3 000 ₽ в день для городских авто и от 12 000 ₽ в день для премиум-класса и спорткаров.</div>
+								</div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Какие документы нужны для аренды?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Только паспорт и водительское удостоверение. Для премиум-авто может потребоваться залоговая сумма.</div></div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Есть ли ограничение по пробегу?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Для большинства автомобилей действует лимит — 200–300 км в сутки. Возможно оформление безлимитного тарифа.</div></div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Можно ли арендовать машину без водителя?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Да, все автомобили доступны как с водителем, так и без.</div></div>
+							</div>
+							<div class="main_faq__accordion">
+								<div class="main_faq__accordion_head js_main_faq_accordion_head">
+									<div class="main_faq__accordion_title">Что делать в случае поломки или ДТП?</div>
+									<div class="main_faq__accordion_arrow"></div>
+								</div>
+								<div class="main_faq__accordion_body js_main_faq_accordion_body"><div class="main_faq__accordion_body_content">Мы обеспечиваем круглосуточную поддержку и предоставляем подменный автомобиль.</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main_form section">
+				<div class="container">
+					<div class="main_form__content">
+						<div class="main_form__left">
+							<h2 class="h2_title main_form__title">Остались вопросы</h2>
+							<div class="main_form__text">Заполните форму и наши менеджеры свяжутся с Вами в ближайшее время</div>
+							<form class="main_form__form">
+								<div class="main_form__form_row">
+									<div class="main_form__form_input text-input">
+										<input type="text" name="name" placeholder="Имя">
+									</div>
+									<div class="main_form__form_input text-input">
+										<input type="text" name="surname" placeholder="Фамилия">
+									</div>
+								</div>
+								<div class="main_form__form_row">
+									<div class="main_form__form_input text-input">
+										<input type="email" name="email" placeholder="Ваш Email">
+									</div>
+									<div class="main_form__form_input text-input">
+										<input type="tel" name="phone" class="js_input_tel" placeholder="+7 900 000 00 00">
+									</div>
+								</div>
+								<div class="main_form__form_textarea text-input this--textarea">
+									<textarea name="message" placeholder="Сообщение"></textarea>
+								</div>
+								<div class="main_form__form_checkbox checkbox">
+									<input type="checkbox" name="agree" id="main_agree">
+									<label for="main_agree">Заполните форму и наши менеджеры свяжутся с Вами в ближайшее время</label>
+								</div>
+								<input type="submit" class="main_form__form_submit btn this--primary" value="Отправить">
+							</form>
+						</div>
+						<div class="main_form__right">
+							<div class="main_form__img">
+								<img src="./img/main/main_form/car.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__content">
+					<div class="footer__top">
+						<div class="footer__top_left">
+							<div class="footer__logo">
+								<img src="./img/footer/logo.svg" alt="">
+							</div>
+							<div class="footer__top_text">Аренда автомобилей премиум-класса и электрокаров.
+								Быстрое оформление, прозрачные условия и поддержка 24/7.</div>
+							<form class="footer__form">
+								<div class="footer__form_input text-input">
+									<input type="email" name="email" placeholder="Email" class="footer__form_email">
+									<input type="submit" value="Подписаться" class="footer__form_submit btn this--primary">
+								</div>
+							</form>
+							<div class="footer__social">
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Facebook.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Twitter.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Instagram.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/linkedin.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/youtube.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">О нас</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Отзывы клиентов</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Информация о компании</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Услуги</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда электромобилей</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда спорткаров</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда бизнес-класса</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Долгосрочная аренда</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда с водителем</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Контакты</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Запросить расчёт стоимости</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Консультация</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Центр поддержки</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Условия аренды</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Политика конфиденциальности</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						Copyright © 2025 WROOM! RENTAL
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.inputmask.bundle.min.js"></script>
+	<script src="js/sumoSelect.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

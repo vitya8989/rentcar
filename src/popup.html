@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto HTML to JPG</title>
+    <style>
+        /* Скрытый контейнер для рендеринга */
+        #render-container {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            width: 600px;
+            background: white;
+        }
+
+        /* Стили попапа */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 620px;
+            max-width: 90vw;
+            background: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        .popup-content {
+            text-align: center;
+        }
+
+        .popup-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        /* Стили контента который будем конвертировать */
+        .content-block {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<!-- Кнопка для демонстрации открытия попапа -->
+<button onclick="openPopupWithContent()">Открыть попап с контентом</button>
+
+<!-- Скрытый контейнер для рендеринга -->
+<div id="render-container"></div>
+
+<!-- Попап -->
+<div id="popup" class="popup">
+    <button class="close-btn" onclick="closePopup()">×</button>
+    <div class="popup-content">
+        <h2>лот428</h2>
+        <div id="popup-loading" class="loading">Конвертация в JPG...</div>
+        <div style="max-width: 400px;margin: 0 auto;">
+            <img id="popup-image" class="popup-image" style="display: none;" />
+        </div>
+        <a href="" id="popup-image-link" download>скачать</a>
+        <a href="">редактировать</a>
+    </div>
+    </div>
+</div>
+
+<div id="overlay" class="overlay" onclick="closePopup()"></div>
+
+<script>
+    // Функция для открытия попапа с контентом
+    function openPopupWithContent() {
+        // HTML-контент который должен отобразиться в попапе
+        const htmlContent = `
+                <div class="content-block">
+                    <h1>Динамический контент</h1>
+                    <p>Этот блок был автоматически сконвертирован в JPG</p>
+                    <ul>
+                        <li>Элемент 1: ${Date.now()}</li>
+                        <li>Элемент 2: ${Math.random().toFixed(2)}</li>
+                        <li>Элемент 3: Статический текст</li>
+                    </ul>
+                    <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 5px;">
+                        <strong>Контент с градиентом и тенями</strong>
+                    </div>
+                </div>
+            `;
+
+        openPopupWithHTML(htmlContent);
+    }
+
+    // Основная функция - открывает попап и конвертирует HTML в JPG
+    function openPopupWithHTML(htmlContent) {
+        const renderContainer = document.getElementById('render-container');
+        const popup = document.getElementById('popup');
+        const popupImage = document.getElementById('popup-image');
+        const popupImageLink = document.getElementById('popup-image-link');
+        const popupLoading = document.getElementById('popup-loading');
+        const overlay = document.getElementById('overlay');
+
+        // 1. Помещаем контент в скрытый контейнер
+        renderContainer.innerHTML = htmlContent;
+
+        // 2. Показываем попап и оверлей
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+        popupLoading.style.display = 'block';
+        popupImage.style.display = 'none';
+
+        // 3. Даём время на отрисовку DOM
+        setTimeout(() => {
+            // 4. Конвертируем в JPG
+            html2canvas(renderContainer, {
+                scale: 2, // Увеличиваем качество
+                useCORS: true,
+                allowTaint: true,
+                backgroundColor: '#ffffff'
+            }).then(canvas => {
+                // 5. Конвертируем canvas в JPG
+                const jpgDataUrl = canvas.toDataURL('image/jpeg', 0.9);
+
+                // 6. Устанавливаем изображение в попап
+                popupImage.src = jpgDataUrl;
+                popupImageLink.href = jpgDataUrl;
+                popupImage.onload = function() {
+                    // 7. Показываем изображение, скрываем лоадер
+                    popupLoading.style.display = 'none';
+                    popupImage.style.display = 'block';
+                };
+
+            }).catch(error => {
+                console.error('Ошибка конвертации:', error);
+                popupLoading.innerHTML = 'Ошибка конвертации';
+            });
+        }, 100);
+    }
+
+    // Функция закрытия попапа
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+
+    // Пример использования с внешним контентом
+    function openPopupWithExternalContent() {
+        // Можно загружать контент с сервера
+        fetch('/api/get-content')
+            .then(response => response.text())
+            .then(html => {
+                openPopupWithHTML(html);
+            });
+    }
+</script>
+
+<!-- Подключаем библиотеку -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
