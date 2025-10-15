@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Аренда автомобилей</title>
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/inputmask.css">
+	<link rel="stylesheet" href="css/sumoSelect.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__content">
+					<div class="header__left">
+						<a href="/" class="header__logo">
+							<img src="./img/header/logo.svg" alt="">
+						</a>
+						<nav class="header__nav">
+							<ul class="header__menu">
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Новые машины</a>
+								</li>
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Каталог</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">Отзывы</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">О компании</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__right">
+						<a href="/auth.html" class="header__link">
+							<img src="./img/header/lk.svg" alt="">
+						</a>
+						<a href="/catalog.html" class="header__btn btn this--secondary">Выбрать машину</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="auth_page">
+		    <section class="auth">
+				<div class="container">
+					<div class="auth__content">
+						<h1 class="auth__title h2_title">Создать аккаунт</h1>
+						<div class="auth__text">Зарегистрируйтесь, чтобы забронировать авто и пользоваться всеми преимуществами сервиса.</div>
+						<form class="auth__form">
+							<div class="auth__form_input text-input">
+								<input type="text" autocomplete="off" name="name" placeholder="Имя">
+							</div>
+							<div class="auth__form_row">
+								<div class="auth__form_input text-input">
+									<input type="email" autocomplete="off" name="email" placeholder="Ваш Email">
+								</div>
+								<div class="auth__form_input text-input">
+									<input type="tel" autocomplete="off" name="phone" placeholder="Телефон" class="js_input_tel">
+								</div>
+							</div>
+							<div class="auth__form_input text-input">
+								<input type="password" autocomplete="new-password" name="password" placeholder="Пароль">
+							</div>
+							<div class="auth__form_input text-input">
+								<input type="password" autocomplete="new-password" name="confirm-password" placeholder="Подтверждение пароля">
+							</div>
+							<a href="/lk-main.html" class="auth__form_submit btn this--primary">Создать</a>
+						</form>
+						<div class="auth__social">
+							<div class="auth__social_title">Создать аккаунт через</div>
+							<div class="auth__social_links">
+								<a href="/lk-main.html" class="auth__social_link this--blue">
+									<img src="./img/icons/vk.svg" alt="">
+									Продолжить через VK
+								</a>
+								<a href="/lk-main.html" class="auth__social_link this--black">
+									<img src="./img/icons/yandex.svg" alt="">
+									Продолжить с Яндекс ID
+								</a>
+								<a href="/lk-main.html" class="auth__social_link this--yellow">
+									<img src="./img/icons/tbank.svg" alt="">
+									Продолжить с T-bank ID
+								</a>
+							</div>
+						</div>
+						<div class="auth__bottom">
+							Уже есть аккаунт?
+							<div class="auth__registration">
+								<a href="/auth.html" class="auth__registration_link">Войти</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__content">
+					<div class="footer__top">
+						<div class="footer__top_left">
+							<div class="footer__logo">
+								<img src="./img/footer/logo.svg" alt="">
+							</div>
+							<div class="footer__top_text">Аренда автомобилей премиум-класса и электрокаров.
+								Быстрое оформление, прозрачные условия и поддержка 24/7.</div>
+							<form class="footer__form">
+								<div class="footer__form_input text-input">
+									<input type="email" name="email" placeholder="Email" class="footer__form_email">
+									<input type="submit" value="Подписаться" class="footer__form_submit btn this--primary">
+								</div>
+							</form>
+							<div class="footer__social">
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Facebook.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Twitter.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Instagram.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/linkedin.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/youtube.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">О нас</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Отзывы клиентов</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Информация о компании</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Услуги</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда электромобилей</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда спорткаров</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда бизнес-класса</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Долгосрочная аренда</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда с водителем</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Контакты</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Запросить расчёт стоимости</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Консультация</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Центр поддержки</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Условия аренды</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Политика конфиденциальности</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						Copyright © 2025 WROOM! RENTAL
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.inputmask.bundle.min.js"></script>
+	<script src="js/sumoSelect.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

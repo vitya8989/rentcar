@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Аренда автомобилей</title>
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/inputmask.css">
+	<link rel="stylesheet" href="css/sumoSelect.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__content">
+					<div class="header__left">
+						<a href="/" class="header__logo">
+							<img src="./img/header/logo.svg" alt="">
+						</a>
+						<nav class="header__nav">
+							<ul class="header__menu">
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Новые машины</a>
+								</li>
+								<li>
+									<a href="/catalog.html" class="header__menu_link">Каталог</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">Отзывы</a>
+								</li>
+								<li>
+									<a href="/about.html" class="header__menu_link">О компании</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__right">
+						<a href="/auth.html" class="header__link">
+							<img src="./img/header/lk.svg" alt="">
+						</a>
+						<a href="/catalog.html" class="header__btn btn this--secondary">Выбрать машину</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="lk_page">
+			<section class="lk section">
+				<div class="container">
+					<div class="lk__content">
+						<h1 class="h2_title lk__title">Мой профиль</h1>
+						<div class="lk__body">
+							<div class="lk__nav">
+								<a href="/lk-main.html" class="lk__nav_link active">
+									<img src="./img/lk/icon_1.svg" alt="">
+									Мои данные
+								</a>
+								<a href="/lk-adresses.html" class="lk__nav_link">
+									<img src="./img/lk/icon_2.svg" alt="">
+									Мои адреса
+								</a>
+								<a href="/lk-payments.html" class="lk__nav_link">
+									<img src="./img/lk/icon_3.svg" alt="">
+									Платежные данные
+								</a>
+								<a href="/lk-orders.html" class="lk__nav_link">
+									<img src="./img/lk/icon_4.svg" alt="">
+									Мои заказы
+								</a>
+								<a href="/lk-favorites.html" class="lk__nav_link">
+									<img src="./img/lk/icon_5.svg" alt="">
+									Избранное
+								</a>
+								<a href="/lk-settings.html" class="lk__nav_link">
+									<img src="./img/lk/icon_6.svg" alt="">
+									Настройки
+								</a>
+							</div>
+							<div class="lk__right">
+								<div class="lk__container">
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="maybe section">
+				<div class="container">
+					<div class="maybe__content">
+						<h2 class="h2_title maybe__title">Возможно Вам понравится</h2>
+						<div class="maybe__text">Выбирайте стиль и технологии будущего уже сегодня</div>
+						<div class="maybe__items">
+							<div class="maybe__item">
+								<div class="maybe__item_top">
+									<div class="maybe__item_name">BMW i4 m50 Gran coupe</div>
+									<div class="maybe__item_price">от 18 000 ₽</div>
+								</div>
+								<img src="./img/maybe/car_1.png" alt="" class="maybe__item_img">
+								<div class="maybe__item_bottom">
+									<div class="maybe__item_dates_input text-input date_input">
+										<img src="./img/icons/picker.svg" alt="" class="date_input__img">
+										<input type="text" class="rental-calendar" placeholder="Выберите даты аренды" readonly>
+										<img src="./img/icons/arrow_down.svg" alt="" class="date_input__arrow">
+									</div>
+									<a href="/cart.html" class="maybe__item_link btn this--primary">Добавить</a>
+								</div>
+							</div>
+							<div class="maybe__item">
+								<div class="maybe__item_top">
+									<div class="maybe__item_name">Volkswagen ID.7</div>
+									<div class="maybe__item_price">от 12 000 ₽</div>
+								</div>
+								<img src="./img/maybe/car_2.png" alt="" class="maybe__item_img">
+								<div class="maybe__item_bottom">
+									<div class="maybe__item_dates_input text-input date_input">
+										<img src="./img/icons/picker.svg" alt="" class="date_input__img">
+										<input type="text" class="rental-calendar" placeholder="Выберите даты аренды" readonly>
+										<img src="./img/icons/arrow_down.svg" alt="" class="date_input__arrow">
+									</div>
+									<a href="/cart.html" class="maybe__item_link btn this--primary">Добавить</a>
+								</div>
+							</div>
+							<div class="maybe__item">
+								<div class="maybe__item_top">
+									<div class="maybe__item_name">Polestar 3</div>
+									<div class="maybe__item_price">от 18 000 ₽</div>
+								</div>
+								<img src="./img/maybe/car_3.png" alt="" class="maybe__item_img">
+								<div class="maybe__item_bottom">
+									<div class="maybe__item_dates_input text-input date_input">
+										<img src="./img/icons/picker.svg" alt="" class="date_input__img">
+										<input type="text" class="rental-calendar" placeholder="Выберите даты аренды" readonly>
+										<img src="./img/icons/arrow_down.svg" alt="" class="date_input__arrow">
+									</div>
+									<a href="/cart.html" class="maybe__item_link btn this--primary">Добавить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__content">
+					<div class="footer__top">
+						<div class="footer__top_left">
+							<div class="footer__logo">
+								<img src="./img/footer/logo.svg" alt="">
+							</div>
+							<div class="footer__top_text">Аренда автомобилей премиум-класса и электрокаров.
+								Быстрое оформление, прозрачные условия и поддержка 24/7.</div>
+							<form class="footer__form">
+								<div class="footer__form_input text-input">
+									<input type="email" name="email" placeholder="Email" class="footer__form_email">
+									<input type="submit" value="Подписаться" class="footer__form_submit btn this--primary">
+								</div>
+							</form>
+							<div class="footer__social">
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Facebook.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Twitter.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/Instagram.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/linkedin.svg" alt="">
+								</a>
+								<a href="#" class="footer__social_link">
+									<img src="./img/footer/youtube.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">О нас</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Отзывы клиентов</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Информация о компании</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Услуги</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда электромобилей</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда спорткаров</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда бизнес-класса</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Долгосрочная аренда</a>
+									</li>
+									<li>
+										<a href="/catalog.html" class="footer__menu_link">Аренда с водителем</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__menu_column">
+								<a href="/about.html" class="footer__menu_title">Контакты</a>
+								<ul class="footer__menu_links">
+									<li>
+										<a href="/about.html" class="footer__menu_link">Запросить расчёт стоимости</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Консультация</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Центр поддержки</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Условия аренды</a>
+									</li>
+									<li>
+										<a href="/about.html" class="footer__menu_link">Политика конфиденциальности</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						Copyright © 2025 WROOM! RENTAL
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.inputmask.bundle.min.js"></script>
+	<script src="js/sumoSelect.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+.lk__body {
+  margin-top: 30px;
+  display: flex;
+  gap: 40px;
+}
+.lk__nav {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: 300px;
+}
+.lk__nav_link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  color: #323232;
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 14px;
+  transition: opacity 0.25s;
+
+  &:hover {
+    @media #{$mouse-device} {
+      opacity: 0.5;
+    }
+  }
+
+  &.active {
+    pointer-events: none;
+    background: #FFDCE1;
+  }
+}
+.lk__right {
+  flex: 1 1 auto;
+}
+.lk__container {
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 40px;
+  box-shadow: 0 6px 13px 0 rgba(#000000, 0.03);
+}
