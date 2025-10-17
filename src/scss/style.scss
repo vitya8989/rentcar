@@ -487,5 +487,12 @@ main {
 @import "./components/auth/auth";
 
 @import "./components/lk/lk";
+@import "./components/lk/personal";
+@import "./components/lk/addresses";
+@import "./components/lk/payments";
+@import "./components/lk/orders";
+@import "./components/lk/favorites";
+@import "./components/lk/settings";
 
 @import "./components/maybe";
+@import "./components/popup";

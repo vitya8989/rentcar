@@ -1,0 +1,82 @@
+.personal {
+  position: relative;
+}
+.personal__edit_btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  color: #323232;
+  font-size: 16px;
+  line-height: 1.4;
+  background: #F6F5F3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.25s;
+
+  &.hide {
+    display: none;
+  }
+
+  &:hover {
+    @media #{$mouse-device} {
+      opacity: 0.7;
+    }
+  }
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}
+.personal__top {
+  padding-right: 250px;
+}
+.personal__text {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #646464;
+}
+.personal__form {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.personal__form_row {
+  display: flex;
+  gap: 10px;
+}
+.personal__form_item {
+  width: calc(50% - 5px);
+}
+.personal__form_title {
+  color: #646464;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.personal__form_input {
+  margin-top: 4px;
+  color: #323232;
+  width: 100%;
+  font-family: GolosText, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -1px;
+}
+.personal__form_submit {
+  margin-top: 6px;
+  max-width: 410px;
+  margin-left: 152px;
+  display: none;
+
+  .personal__form.edit & {
+    display: flex;
+  }
+}

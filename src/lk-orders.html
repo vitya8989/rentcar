@@ -55,7 +55,7 @@
 						<h1 class="h2_title lk__title">Мой профиль</h1>
 						<div class="lk__body">
 							<div class="lk__nav">
-								<a href="/lk-main.html" class="lk__nav_link active">
+								<a href="/lk-main.html" class="lk__nav_link">
 									<img src="./img/lk/icon_1.svg" alt="">
 									Мои данные
 								</a>
@@ -67,7 +67,7 @@
 									<img src="./img/lk/icon_3.svg" alt="">
 									Платежные данные
 								</a>
-								<a href="/lk-orders.html" class="lk__nav_link">
+								<a href="/lk-orders.html" class="lk__nav_link active">
 									<img src="./img/lk/icon_4.svg" alt="">
 									Мои заказы
 								</a>
@@ -81,48 +81,100 @@
 								</a>
 							</div>
 							<div class="lk__right">
-								<div class="lk__container personal">
-									<div class="personal__edit_btn js_personal_edit_btn">
-										Изменить данные
-										<img src="./img/icons/edit.svg" alt="">
+								<div class="lk__container orders">
+									<div class="lk__container_title">Мои заказы</div>
+									<div class="orders__tabs">
+										<div class="orders__tabs_links">
+											<div class="orders__tabs_link js_orders_tabs_link active" data-tab="1">Все заказы</div>
+											<div class="orders__tabs_link js_orders_tabs_link" data-tab="2">Активные</div>
+											<div class="orders__tabs_link js_orders_tabs_link" data-tab="3">Завершенные</div>
+											<div class="orders__tabs_link js_orders_tabs_link" data-tab="4">Отмененные</div>
+										</div>
+										<div class="orders__tabs_bodies">
+											<div class="orders__tabs_body active js_orders_tabs_body" data-tab="1">
+												<div class="orders__table orders_table">
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 375684324387</div>
+														<div class="orders_table__td">01.10.2025</div>
+														<div class="orders_table__td">345 000 ₽</div>
+														<div class="orders_table__td"><span class="orders__status this--active">Активный</span></div>
+													</div>
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 37568429423</div>
+														<div class="orders_table__td">17.02.2025</div>
+														<div class="orders_table__td">184 000 ₽</div>
+														<div class="orders_table__td"><span class="orders__status">Завершен</span></div>
+													</div>
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 375684324387</div>
+														<div class="orders_table__td">01.10.2025</div>
+														<div class="orders_table__td">345 000 ₽</div>
+														<div class="orders_table__td"><span class="orders__status this--canceled">Отменен</span></div>
+													</div>
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 375684324387</div>
+														<div class="orders_table__td">01.10.2025</div>
+														<div class="orders_table__td">345 000 ₽</div>
+														<div class="orders_table__td"><span class="orders__status this--active">Активный</span></div>
+													</div>
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 37568429423</div>
+														<div class="orders_table__td">17.02.2025</div>
+														<div class="orders_table__td">184 000 ₽</div>
+														<div class="orders_table__td">Завершен</div>
+													</div>
+												</div>
+											</div>
+											<div class="orders__tabs_body js_orders_tabs_body" data-tab="2">
+												<div class="orders__table">
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 375684324387</div>
+														<div class="orders_table__td">01.10.2025</div>
+														<div class="orders_table__td">345 000 ₽</div>
+														<div class="orders_table__td"><span class="orders__status this--active">Активный</span></div>
+													</div>
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 375684324387</div>
+														<div class="orders_table__td">01.10.2025</div>
+														<div class="orders_table__td">345 000 ₽</div>
+														<div class="orders_table__td"><span class="orders__status this--canceled">Отменен</span></div>
+													</div>
+												</div>
+											</div>
+											<div class="orders__tabs_body js_orders_tabs_body" data-tab="3">
+												<div class="orders__table">
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 375684324387</div>
+														<div class="orders_table__td">01.10.2025</div>
+														<div class="orders_table__td">345 000 ₽</div>
+														<div class="orders_table__td"><span class="orders__status this--active">Активный</span></div>
+													</div>
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 37568429423</div>
+														<div class="orders_table__td">17.02.2025</div>
+														<div class="orders_table__td">184 000 ₽</div>
+														<div class="orders_table__td">Завершен</div>
+													</div>
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 375684324387</div>
+														<div class="orders_table__td">01.10.2025</div>
+														<div class="orders_table__td">345 000 ₽</div>
+														<div class="orders_table__td"><span class="orders__status this--canceled">Отменен</span></div>
+													</div>
+												</div>
+											</div>
+											<div class="orders__tabs_body js_orders_tabs_body" data-tab="4">
+												<div class="orders__table">
+													<div class="orders_table__tr">
+														<div class="orders_table__td">№ 375684324387</div>
+														<div class="orders_table__td">01.10.2025</div>
+														<div class="orders_table__td">345 000 ₽</div>
+														<div class="orders_table__td"><span class="orders__status this--active">Активный</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="personal__top">
-										<div class="personal__title lk__container_title">Персональные данные</div>
-										<div class="personal__text">Мы бережно храним ваши данные и используем их только для оформления аренды</div>
-									</div>
-									<form class="personal__form js_personal_form">
-										<div class="personal__form_row">
-											<div class="personal__form_item">
-												<div class="personal__form_title">Имя</div>
-												<input type="text" class="personal__form_input" name="name" value="Имя" readonly>
-											</div>
-											<div class="personal__form_item">
-												<div class="personal__form_title">Фамилия</div>
-												<input type="text" class="personal__form_input" name="surname" value="Фамилия" readonly>
-											</div>
-										</div>
-										<div class="personal__form_row">
-											<div class="personal__form_item">
-												<div class="personal__form_title">Дата рождения </div>
-												<input type="text" class="personal__form_input" name="birthday" value="20.04.2001" readonly>
-											</div>
-											<div class="personal__form_item">
-												<div class="personal__form_title">Серия и номер паспорта</div>
-												<input type="text" class="personal__form_input js_input_passport" name="passport" value="11 22 333 444" readonly>
-											</div>
-										</div>
-										<div class="personal__form_row">
-											<div class="personal__form_item">
-												<div class="personal__form_title">Номер телефона</div>
-												<input type="tel" class="personal__form_input js_input_tel_2" name="phone" value="+7 (900) 000 00 00" readonly>
-											</div>
-											<div class="personal__form_item">
-												<div class="personal__form_title">Email</div>
-												<input type="email" class="personal__form_input" name="email" value="wroom@wroom.com" readonly>
-											</div>
-										</div>
-										<input type="submit" class="personal__form_submit btn this--primary" value="Сохранить">
-									</form>
 								</div>
 							</div>
 						</div>

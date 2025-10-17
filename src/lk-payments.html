@@ -55,7 +55,7 @@
 						<h1 class="h2_title lk__title">Мой профиль</h1>
 						<div class="lk__body">
 							<div class="lk__nav">
-								<a href="/lk-main.html" class="lk__nav_link active">
+								<a href="/lk-main.html" class="lk__nav_link">
 									<img src="./img/lk/icon_1.svg" alt="">
 									Мои данные
 								</a>
@@ -63,7 +63,7 @@
 									<img src="./img/lk/icon_2.svg" alt="">
 									Мои адреса
 								</a>
-								<a href="/lk-payments.html" class="lk__nav_link">
+								<a href="/lk-payments.html" class="lk__nav_link active">
 									<img src="./img/lk/icon_3.svg" alt="">
 									Платежные данные
 								</a>
@@ -81,54 +81,76 @@
 								</a>
 							</div>
 							<div class="lk__right">
-								<div class="lk__container personal">
-									<div class="personal__edit_btn js_personal_edit_btn">
-										Изменить данные
-										<img src="./img/icons/edit.svg" alt="">
+								<div class="lk__container payments">
+									<div class="lk__container_title">Платежные данные</div>
+									<div class="payments__slider swiper-container js_payments_slider">
+										<div class="payments__slider_wrapper swiper-wrapper">
+											<div class="payments__slider_slide swiper-slide">
+												<div class="payments__item js_payments_item">
+													<div class="payments__item_edit_btn js_open_popup">
+														<img src="./img/icons/edit.svg" alt="">
+													</div>
+													<div class="payments__item_hide_btn active js_toggle_number">
+														<img src="./img/icons/eye.svg" alt="">
+													</div>
+
+													<div class="payments__item_number_wr">
+														<div class="payments__item_number_title">Номер карты:</div>
+														<div class="payments__item_number js_payments_number" data-number="1234 5678 9012 5678">**** **** **** 5678</div>
+													</div>
+													<div class="payments__item_row">
+														<div class="payments__item_date_wr">
+															<div class="payments__item_title">Срок действия</div>
+															<div class="payments__item_value">10/32</div>
+														</div>
+														<div class="payments__item_cvc_wr">
+															<div class="payments__item_title">CVC</div>
+															<div class="payments__item_value js_payments_number js_cvc_number" data-number="567">***</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="payments__slider_slide swiper-slide">
+												<div class="payments__popup_link js_open_popup">
+													<div class="payments__popup_link_text">Новый способ<br> оплаты</div>
+													<div class="payments__popup_link_img">
+														<img src="./img/icons/plus.svg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="personal__top">
-										<div class="personal__title lk__container_title">Персональные данные</div>
-										<div class="personal__text">Мы бережно храним ваши данные и используем их только для оформления аренды</div>
-									</div>
-									<form class="personal__form js_personal_form">
-										<div class="personal__form_row">
-											<div class="personal__form_item">
-												<div class="personal__form_title">Имя</div>
-												<input type="text" class="personal__form_input" name="name" value="Имя" readonly>
-											</div>
-											<div class="personal__form_item">
-												<div class="personal__form_title">Фамилия</div>
-												<input type="text" class="personal__form_input" name="surname" value="Фамилия" readonly>
-											</div>
-										</div>
-										<div class="personal__form_row">
-											<div class="personal__form_item">
-												<div class="personal__form_title">Дата рождения </div>
-												<input type="text" class="personal__form_input" name="birthday" value="20.04.2001" readonly>
-											</div>
-											<div class="personal__form_item">
-												<div class="personal__form_title">Серия и номер паспорта</div>
-												<input type="text" class="personal__form_input js_input_passport" name="passport" value="11 22 333 444" readonly>
-											</div>
-										</div>
-										<div class="personal__form_row">
-											<div class="personal__form_item">
-												<div class="personal__form_title">Номер телефона</div>
-												<input type="tel" class="personal__form_input js_input_tel_2" name="phone" value="+7 (900) 000 00 00" readonly>
-											</div>
-											<div class="personal__form_item">
-												<div class="personal__form_title">Email</div>
-												<input type="email" class="personal__form_input" name="email" value="wroom@wroom.com" readonly>
-											</div>
-										</div>
-										<input type="submit" class="personal__form_submit btn this--primary" value="Сохранить">
-									</form>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+			<div class="payments_popup popup js_popup">
+				<div class="popup__body">
+					<div class="popup__close js_popup_close"></div>
+					<div class="popup__title">Платежные данные</div>
+					<form class="payments_popup__form js_payments_popup_form">
+						<div class="payments_popup__form_inputs">
+							<div class="payments__item_number_wr">
+								<div class="payments__item_number_title">Номер карты:</div>
+								<input type="text" placeholder="0000 0000 0000 0000" class="payments_popup__form_input js_cardNumber_input">
+							</div>
+							<div class="payments__item_row">
+								<div class="payments__item_date_wr">
+									<div class="payments__item_title">Срок действия</div>
+									<input type="text" class="payments_popup__form_input" placeholder="мм/гг" maxlength="5">
+								</div>
+								<div class="payments__item_cvc_wr">
+									<div class="payments__item_title">CVC</div>
+									<input type="text" placeholder="000" class="payments_popup__form_input js_cvc_input">
+								</div>
+							</div>
+						</div>
+						<input type="submit" class="addresses_popup__form_submit btn this--primary" value="Добавить">
+					</form>
+				</div>
+			</div>
 			<section class="maybe section">
 				<div class="container">
 					<div class="maybe__content">

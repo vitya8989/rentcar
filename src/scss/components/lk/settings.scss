@@ -1,0 +1,77 @@
+.settings__checkbox {
+  margin-top: 34px;
+  width: 100%;
+  max-width: 510px;
+  padding: 20px;
+  background: #F6F5F3;
+  border-radius: 20px;
+
+  input {
+    display: none;
+  }
+  label {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    color: #323232;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 48px;
+      height: 22px;
+      background: #ffffff;
+      box-shadow: 0 6px 13px 0 rgba(#000000, 0.03);
+      border-radius: 90px;
+      transition: background 0.25s;
+      top: 0;
+      right: 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 28px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #FF3B58;
+      transition: background 0.25s, right 0.25s;
+    }
+  }
+  input:checked + label {
+    &::before {
+      background: #FF3B58;
+    }
+    &::after {
+      background: #ffffff;
+      right: 2px;
+    }
+  }
+}
+
+.settings__delete_btn {
+  margin-top: 18px;
+  display: flex;
+  padding: 20px;
+  gap: 18px;
+  align-items: center;
+  background: #FFDCE1;
+  width: max-content;
+  border-radius: 20px;
+  color: #FF3B58;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  transition: opacity 0.25s;
+
+  &:hover {
+    @media #{$mouse-device} {
+      opacity: 0.7;
+    }
+  }
+}

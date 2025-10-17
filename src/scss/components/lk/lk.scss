@@ -34,10 +34,19 @@
 }
 .lk__right {
   flex: 1 1 auto;
+  min-width: 0;
 }
 .lk__container {
   border-radius: 20px;
   background: #ffffff;
   padding: 40px;
   box-shadow: 0 6px 13px 0 rgba(#000000, 0.03);
+}
+.lk__container_title {
+  font-size: 28px;
+  line-height: 31px;
+  font-family: GolosText, sans-serif;
+  font-weight: 600;
+  color: #323232;
+  letter-spacing: -1px;
 }

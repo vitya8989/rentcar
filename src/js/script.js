@@ -24,19 +24,17 @@ if (document.querySelector('.js_main_electric_slider')) {
         },
     });
 }
-const popularTabLinks = document.querySelectorAll('.js_main_popular_tabs_link');
-if (popularTabLinks.length) {
-    const popularTabBodies = document.querySelectorAll('.js_main_popular_tabs_body');
 
+function tabs (tabLinks, tabBodies) {
     // Функция для переключения табов
     const switchTab = (tabId) => {
         // Убираем активные классы у всех ссылок и табов
-        popularTabLinks.forEach(link => link.classList.remove('active'));
-        popularTabBodies.forEach(body => body.classList.remove('active'));
+        tabLinks.forEach(link => link.classList.remove('active'));
+        tabBodies.forEach(body => body.classList.remove('active'));
 
         // Находим нужные элементы в существующих коллекциях
-        const activeLink = Array.from(popularTabLinks).find(link => link.getAttribute('data-tab') === tabId);
-        const activeBody = Array.from(popularTabBodies).find(body => body.getAttribute('data-tab') === tabId);
+        const activeLink = Array.from(tabLinks).find(link => link.getAttribute('data-tab') === tabId);
+        const activeBody = Array.from(tabBodies).find(body => body.getAttribute('data-tab') === tabId);
 
         // Добавляем активные классы
         if (activeLink) activeLink.classList.add('active');
@@ -44,7 +42,7 @@ if (popularTabLinks.length) {
     };
 
     // Обработчик клика для каждой ссылки
-    popularTabLinks.forEach(link => {
+    tabLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const tabId = link.getAttribute('data-tab');
@@ -52,6 +50,13 @@ if (popularTabLinks.length) {
         });
     });
 }
+
+const popularTabLinks = document.querySelectorAll('.js_main_popular_tabs_link');
+if (popularTabLinks.length) {
+    const popularTabBodies = document.querySelectorAll('.js_main_popular_tabs_body');
+    tabs(popularTabLinks, popularTabBodies);
+}
+
 const mainFaqAccordions = document.querySelector('.js_main_faq_accordions');
 
 if (mainFaqAccordions) {
@@ -83,7 +88,10 @@ if (mainFaqAccordions) {
     });
 }
 $('.js_input_tel').inputmask('+7 999 999 99 99');
-
+$('.js_input_tel_2').inputmask('+7 (999) 999 99 99');
+$('.js_input_passport').inputmask('99 99 999 999');
+$('.js_cardNumber_input').inputmask('9999 9999 9999 9999');
+$('.js_cvc_input').inputmask('999');
 
 const datePickers = document.querySelectorAll('.rental-calendar');
 if (datePickers.length) {
@@ -242,4 +250,110 @@ if (document.getElementById('map')) {
         // Центрируем карту на метке
         myMap.setCenter([lat, lon]);
     }
+}
+
+const personalEditBtn = document.querySelector('.js_personal_edit_btn')
+if (personalEditBtn) {
+    const personalForm = document.querySelector('.js_personal_form');
+    const inputs = personalForm.querySelectorAll('input');
+
+    personalEditBtn.addEventListener('click', () => {
+        personalForm.classList.add('edit');
+        personalEditBtn.classList.add('hide');
+
+        inputs.forEach((input) => {
+           input.removeAttribute('readonly');
+        });
+    });
+    personalForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        personalForm.classList.remove('edit');
+        personalEditBtn.classList.remove('hide');
+        inputs.forEach((input) => {
+            input.setAttribute('readonly', 'true');
+        });
+    });
+}
+
+if (document.querySelector('.js_addresses_slider')) {
+    new Swiper('.js_addresses_slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+    });
+}
+if (document.querySelector('.js_payments_slider')) {
+    new Swiper('.js_payments_slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+    });
+}
+
+const openPopupBtns = document.querySelectorAll('.js_open_popup');
+
+if (openPopupBtns.length) {
+    const popup = document.querySelector('.js_popup');
+    const closeBtn = popup.querySelector('.js_popup_close')
+
+    openPopupBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            popup.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        })
+    });
+    popup.addEventListener('click', (e) => {
+        if (!e.target.closest('.popup__body')) {
+            popup.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+    })
+    closeBtn.addEventListener('click', () => {
+        popup.classList.remove('show');
+        document.body.style.overflow = '';
+    })
+}
+
+const paymentsItems = document.querySelectorAll('.js_payments_item');
+
+if (paymentsItems.length) {
+    paymentsItems.forEach((item) => {
+        const cardNumbers = item.querySelectorAll('.js_payments_number');
+        const toggleBtn = item.querySelector('.js_toggle_number');
+
+        let isHidden = true;
+
+        toggleBtn.addEventListener('click', function() {
+            toggleBtn.classList.toggle('active');
+            isHidden = !isHidden;
+
+            cardNumbers.forEach((cardNumber) => {
+                const fullNumber = cardNumber.getAttribute('data-number');
+
+                // Проверяем, является ли это CVC кодом
+                if (cardNumber.classList.contains('js_cvc_number')) {
+                    // Логика для CVC
+                    if (isHidden) {
+                        cardNumber.textContent = '***';
+                    } else {
+                        cardNumber.textContent = fullNumber;
+                    }
+                } else {
+                    // Логика для номера карты
+                    if (isHidden) {
+                        // Маскируем номер карты, оставляя последние 4 цифры
+                        const cleaned = fullNumber.replace(/\s/g, '');
+                        const lastFour = cleaned.slice(-4);
+                        const masked = '**** **** **** ' + lastFour;
+                        cardNumber.textContent = masked;
+                    } else {
+                        cardNumber.textContent = fullNumber;
+                    }
+                }
+            });
+        });
+    });
+}
+const orderTabLinks = document.querySelectorAll('.js_orders_tabs_link');
+if (orderTabLinks.length) {
+    const orderTabBodies = document.querySelectorAll('.js_orders_tabs_body');
+    tabs(orderTabLinks, orderTabBodies);
 }

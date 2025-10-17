@@ -55,7 +55,7 @@
 						<h1 class="h2_title lk__title">Мой профиль</h1>
 						<div class="lk__body">
 							<div class="lk__nav">
-								<a href="/lk-main.html" class="lk__nav_link active">
+								<a href="/lk-main.html" class="lk__nav_link">
 									<img src="./img/lk/icon_1.svg" alt="">
 									Мои данные
 								</a>
@@ -75,54 +75,19 @@
 									<img src="./img/lk/icon_5.svg" alt="">
 									Избранное
 								</a>
-								<a href="/lk-settings.html" class="lk__nav_link">
+								<a href="/lk-settings.html" class="lk__nav_link active">
 									<img src="./img/lk/icon_6.svg" alt="">
 									Настройки
 								</a>
 							</div>
 							<div class="lk__right">
-								<div class="lk__container personal">
-									<div class="personal__edit_btn js_personal_edit_btn">
-										Изменить данные
-										<img src="./img/icons/edit.svg" alt="">
+								<div class="lk__container settings">
+									<div class="lk__container_title">Настройки</div>
+									<div class="settings__checkbox">
+										<input type="checkbox" name="push" id="push">
+										<label for="push">Включить уведомления в браузере</label>
 									</div>
-									<div class="personal__top">
-										<div class="personal__title lk__container_title">Персональные данные</div>
-										<div class="personal__text">Мы бережно храним ваши данные и используем их только для оформления аренды</div>
-									</div>
-									<form class="personal__form js_personal_form">
-										<div class="personal__form_row">
-											<div class="personal__form_item">
-												<div class="personal__form_title">Имя</div>
-												<input type="text" class="personal__form_input" name="name" value="Имя" readonly>
-											</div>
-											<div class="personal__form_item">
-												<div class="personal__form_title">Фамилия</div>
-												<input type="text" class="personal__form_input" name="surname" value="Фамилия" readonly>
-											</div>
-										</div>
-										<div class="personal__form_row">
-											<div class="personal__form_item">
-												<div class="personal__form_title">Дата рождения </div>
-												<input type="text" class="personal__form_input" name="birthday" value="20.04.2001" readonly>
-											</div>
-											<div class="personal__form_item">
-												<div class="personal__form_title">Серия и номер паспорта</div>
-												<input type="text" class="personal__form_input js_input_passport" name="passport" value="11 22 333 444" readonly>
-											</div>
-										</div>
-										<div class="personal__form_row">
-											<div class="personal__form_item">
-												<div class="personal__form_title">Номер телефона</div>
-												<input type="tel" class="personal__form_input js_input_tel_2" name="phone" value="+7 (900) 000 00 00" readonly>
-											</div>
-											<div class="personal__form_item">
-												<div class="personal__form_title">Email</div>
-												<input type="email" class="personal__form_input" name="email" value="wroom@wroom.com" readonly>
-											</div>
-										</div>
-										<input type="submit" class="personal__form_submit btn this--primary" value="Сохранить">
-									</form>
+									<a href="#" class="settings__delete_btn">Удалить аккаунт <img src="./img/icons/deleteUser.svg" alt=""></a>
 								</div>
 							</div>
 						</div>
