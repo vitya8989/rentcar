@@ -1,5 +1,9 @@
 .orders__tabs {
   margin-top: 34px;
+
+  @media ($tablet3) {
+    margin-top: 24px;
+  }
 }
 .orders__tabs_body {
   display: none;
@@ -7,6 +11,11 @@
   &.active {
     display: block;
   }
+}
+.orders__tabs_links_wr {
+  overflow-x: auto;
+  margin: 0 -20px;
+  padding:  0 20px;
 }
 .orders__tabs_links {
   background: #F6F5F3;
@@ -23,6 +32,7 @@
   line-height: 1.4;
   cursor: pointer;
   transition: color 0.25s, background 0.25s;
+  white-space: nowrap;
 
   &.active {
     pointer-events: none;
@@ -32,14 +42,34 @@
 }
 .orders__tabs_bodies {
   margin-top: 4px;
+  @media ($tablet3) {
+    margin-top: 10px;
+  }
+}
+.orders_table {
+  @media ($tablet3) {
+   display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 .orders_table__tr {
   display: flex;
   padding: 20px;
   border-radius: 20px;
 
+  @media ($tablet3) {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
   &:nth-child(even) {
     background: #F6F5F3;
+  }
+  &:nth-child(odd) {
+    @media ($tablet3) {
+      border: 1px solid #F6F5F3;
+    }
   }
 }
 .orders_table__td {
@@ -48,9 +78,24 @@
   font-size: 18px;
   line-height: 1.5;
   color: #646464;
+  white-space: nowrap;
+
+  @media ($tablet3) {
+    width: calc(50% - 6px);
+  }
 
   &:not(:first-child) {
     padding-left: 20px;
+
+    @media ($tablet3) {
+      padding-left: 0;
+    }
+  }
+  &:nth-child(2),
+  &:nth-child(4) {
+    @media ($tablet3) {
+      text-align: right;
+    }
   }
 }
 .orders__status {

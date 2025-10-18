@@ -3,6 +3,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
+  @media ($tablet) {
+    margin-top: 20px;
+  }
 }
 .detail_comfort__item {
   background: #ffffff;
@@ -13,4 +17,10 @@
   line-height: 22px;
   color: #828282;
   letter-spacing: -1px;
+
+  @media ($tablet3) {
+    padding: 8px 16px;
+    font-size: 18px;
+    line-height: 20px;
+  }
 }

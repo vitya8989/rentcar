@@ -7,6 +7,10 @@
 .addresses__slider_slide.swiper-slide {
   width: 346px;
   height: auto;
+
+  @media ($tablet3) {
+    width: 279px;
+  }
 }
 .addresses__item {
   background: #F6F5F3;
@@ -14,6 +18,10 @@
   border-radius: 20px;
   position: relative;
   height: 100%;
+
+  @media ($tablet3) {
+    padding: 20px;
+  }
 }
 .addresses__item_edit_btn {
   position: absolute;

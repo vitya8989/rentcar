@@ -22,7 +22,7 @@
 						<a href="/" class="header__logo">
 							<img src="./img/header/logo.svg" alt="">
 						</a>
-						<nav class="header__nav">
+						<nav class="header__nav js_nav">
 							<ul class="header__menu">
 								<li>
 									<a href="/catalog.html" class="header__menu_link">Новые машины</a>
@@ -37,13 +37,19 @@
 									<a href="/about.html" class="header__menu_link">О компании</a>
 								</li>
 							</ul>
+							<a href="/catalog.html" class="header__btn this--mobile btn this--primary">Выбрать машину</a>
 						</nav>
 					</div>
 					<div class="header__right">
 						<a href="/auth.html" class="header__link">
 							<img src="./img/header/lk.svg" alt="">
 						</a>
-						<a href="/catalog.html" class="header__btn btn this--secondary">Выбрать машину</a>
+						<a href="/catalog.html" class="header__btn this--desktop btn this--secondary">Выбрать машину</a>
+						<div class="header__burger js_burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -52,7 +58,7 @@
 			<section class="main_top section">
 				<div class="container">
 					<div class="main_top__content">
-						<h1 class="main_top__title h1_title">Аренда автомобилей в Москве</h1>
+						<h1 class="main_top__title">Аренда автомобилей в Москве</h1>
 						<div class="main_top__slider_wr">
 							<div class="main_top__slider main_top_slider swiper-container js_main_top_slider">
 								<div class="main_top_slider__wrappper swiper-wrapper">
@@ -88,31 +94,33 @@
 								</div>
 							</div>
 							<div class="main_top__slider_bottom">
-								<div class="main_top__slider_links">
-									<a href="/catalog.html" class="main_top__slider_link">
-										<img src="./img/icons/tesla.svg" alt="">
-									</a>
-									<a href="/catalog.html" class="main_top__slider_link">
-										<img src="./img/icons/BMW.svg" alt="">
-									</a>
-									<a href="/catalog.html" class="main_top__slider_link">
-										<img src="./img/icons/vw.svg" alt="">
-									</a>
-									<a href="/catalog.html" class="main_top__slider_link">
-										<img src="./img/icons/brand_4.png" alt="">
-									</a>
-									<a href="/catalog.html" class="main_top__slider_link">
-										<img src="./img/icons/kia.svg" alt="">
-									</a>
-									<a href="/catalog.html" class="main_top__slider_link">
-										<img src="./img/icons/lotus.svg" alt="">
-									</a>
-									<a href="/catalog.html" class="main_top__slider_link">
-										<img src="./img/icons/nissan.svg" alt="">
-									</a>
-									<a href="/catalog.html" class="main_top__slider_link">
-										<img src="./img/icons/Hyundai.svg" alt="">
-									</a>
+								<div class="main_top__slider_links_wr">
+									<div class="main_top__slider_links">
+										<a href="/catalog.html" class="main_top__slider_link">
+											<img src="./img/icons/tesla.svg" alt="">
+										</a>
+										<a href="/catalog.html" class="main_top__slider_link">
+											<img src="./img/icons/BMW.svg" alt="">
+										</a>
+										<a href="/catalog.html" class="main_top__slider_link">
+											<img src="./img/icons/vw.svg" alt="">
+										</a>
+										<a href="/catalog.html" class="main_top__slider_link">
+											<img src="./img/icons/brand_4.png" alt="">
+										</a>
+										<a href="/catalog.html" class="main_top__slider_link">
+											<img src="./img/icons/kia.svg" alt="">
+										</a>
+										<a href="/catalog.html" class="main_top__slider_link">
+											<img src="./img/icons/lotus.svg" alt="">
+										</a>
+										<a href="/catalog.html" class="main_top__slider_link">
+											<img src="./img/icons/nissan.svg" alt="">
+										</a>
+										<a href="/catalog.html" class="main_top__slider_link">
+											<img src="./img/icons/Hyundai.svg" alt="">
+										</a>
+									</div>
 								</div>
 								<div class="main_top__slider_arrows">
 									<div class="main_top__slider_arrow this--prev js_main_top__slider_arrow_prev">

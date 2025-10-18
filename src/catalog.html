@@ -22,7 +22,7 @@
 						<a href="/" class="header__logo">
 							<img src="./img/header/logo.svg" alt="">
 						</a>
-						<nav class="header__nav">
+						<nav class="header__nav js_nav">
 							<ul class="header__menu">
 								<li>
 									<a href="/catalog.html" class="header__menu_link">Новые машины</a>
@@ -37,13 +37,19 @@
 									<a href="/about.html" class="header__menu_link">О компании</a>
 								</li>
 							</ul>
+							<a href="/catalog.html" class="header__btn this--mobile btn this--primary">Выбрать машину</a>
 						</nav>
 					</div>
 					<div class="header__right">
 						<a href="/auth.html" class="header__link">
 							<img src="./img/header/lk.svg" alt="">
 						</a>
-						<a href="/catalog.html" class="header__btn btn this--secondary">Выбрать машину</a>
+						<a href="/catalog.html" class="header__btn this--desktop btn this--secondary">Выбрать машину</a>
+						<div class="header__burger js_burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -55,7 +61,8 @@
 						<h1 class="catalog__title">Легкий способ арендовать машину твоей мечты</h1>
 						<div class="catalog__subtitle">Ответы на популярные вопросы об аренде автомобилей</div>
 						<div class="catalog__body">
-							<div class="catalog__left">
+							<div class="catalog__left js_filter">
+								<div class="catalog__filter_close js_filter_close"></div>
 								<div class="catalog__filter">
 									<h3 class="catalog__filter_title">Фильтры</h3>
 									<div class="catalog__filter_filters">
@@ -231,20 +238,31 @@
 								</div>
 							</div>
 							<div class="catalog__right">
-								<div class="catalog__top">
-									<div class="catalog__dates_input text-input date_input">
-										<img src="./img/icons/picker.svg" alt="" class="date_input__img">
-										<input type="text" class="rental-calendar" placeholder="Выберите даты аренды" readonly>
-										<img src="./img/icons/arrow_down.svg" alt="" class="date_input__arrow">
+								<div class="catalog__top_wr">
+									<div class="catalog__top_filter_open_mob js_filter_open">
+										<img src="./img/icons/filters.svg" alt="">
+										Фильтры
 									</div>
-									<div class="catalog__sort">
-										<div class="catalog__sort_title">Сортировка</div>
-										<select class="catalog__sort_select select">
-											<option value="1">По популярности</option>
-											<option value="1">Дороже</option>
-											<option value="1">Дешевле</option>
-											<option value="1">По новизне</option>
-										</select>
+									<div class="catalog__top_sort_open_mob js_sort_open">
+										<img src="./img/icons/sort.svg" alt="">
+										Сортировка
+									</div>
+									<div class="catalog__top js_sort">
+										<div class="catalog__top_close js_sort_close"></div>
+										<div class="catalog__dates_input text-input date_input">
+											<img src="./img/icons/picker.svg" alt="" class="date_input__img">
+											<input type="text" class="rental-calendar" placeholder="Выберите даты аренды" readonly>
+											<img src="./img/icons/arrow_down.svg" alt="" class="date_input__arrow">
+										</div>
+										<div class="catalog__sort">
+											<div class="catalog__sort_title">Сортировка</div>
+											<select class="catalog__sort_select select">
+												<option value="1">По популярности</option>
+												<option value="1">Дороже</option>
+												<option value="1">Дешевле</option>
+												<option value="1">По новизне</option>
+											</select>
+										</div>
 									</div>
 								</div>
 								<div class="catalog__items">

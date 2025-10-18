@@ -1,3 +1,19 @@
+const burger = document.querySelector('.js_burger');
+
+if (burger) {
+    const nav = document.querySelector('.js_nav');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('menu_opened');
+        nav.classList.toggle('menu_opened');
+
+        if (burger.classList.contains('menu_opened')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+}
+
 if (document.querySelector('.js_main_top_slider')) {
     new Swiper('.js_main_top_slider', {
         effect: 'fade',
@@ -16,12 +32,20 @@ if (document.querySelector('.js_main_top_slider')) {
 }
 if (document.querySelector('.js_main_electric_slider')) {
     new Swiper('.js_main_electric_slider', {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 20,
         navigation: {
             nextEl: ".js_main_electric__arrow_next",
             prevEl: ".js_main_electric__arrow_prev",
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            }
+        }
     });
 }
 
@@ -356,4 +380,34 @@ const orderTabLinks = document.querySelectorAll('.js_orders_tabs_link');
 if (orderTabLinks.length) {
     const orderTabBodies = document.querySelectorAll('.js_orders_tabs_body');
     tabs(orderTabLinks, orderTabBodies);
+}
+
+const openFilterBtn = document.querySelector('.js_filter_open');
+
+if (openFilterBtn) {
+    const filter = document.querySelector('.js_filter');
+    const filterClose = document.querySelector('.js_filter_close');
+
+    openFilterBtn.addEventListener('click', () => {
+        filter.classList.add('filter_opened');
+        document.body.style.overflow = 'hidden';
+    });
+    filterClose.addEventListener('click', () => {
+        filter.classList.remove('filter_opened');
+        document.body.style.overflow = '';
+    });
+}
+
+const openSortBtn = document.querySelector('.js_sort_open');
+
+if (openSortBtn) {
+    const sort = document.querySelector('.js_sort');
+    const sortClose = document.querySelector('.js_sort_close');
+
+    openSortBtn.addEventListener('click', () => {
+        sort.classList.toggle('sort_opened');
+    });
+    sortClose.addEventListener('click', () => {
+        sort.classList.remove('sort_opened');
+    });
 }

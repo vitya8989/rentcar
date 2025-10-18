@@ -1,5 +1,9 @@
 .auth {
   padding: 160px 0 120px;
+
+  @media ($tablet) {
+    padding: 60px 0 30px;
+  }
 }
 .auth__content {
   max-width: 540px;
@@ -8,12 +12,20 @@
   border-radius: 30px;
   background: #ffffff;
   box-shadow: 0 6px 13px 0 rgba(#000000, 0.03);
+
+  @media ($tablet3) {
+    padding: 20px;
+  }
 }
 .auth__text {
   color: #646464;
   font-size: 18px;
   line-height: 1.4;
   margin-top: 8px;
+
+  @media ($tablet3) {
+    font-size: 16px;
+  }
 }
 .auth__form {
   margin-top: 20px;
@@ -81,7 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
   font-size: 16px;
   line-height: 1.4;
   color: #646464;
@@ -96,4 +108,10 @@
   align-items: center;
   gap: 4px;
   color: #646464;
+
+  span {
+    @media ($tablet3) {
+      display: none;
+    }
+  }
 }

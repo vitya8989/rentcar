@@ -7,6 +7,11 @@
 .payments__slider_slide.swiper-slide {
   width: 410px;
   height: 240px;
+
+  @media ($tablet3) {
+    width: 283px;
+    height: 200px;
+  }
 }
 .payments__item {
   height: 100%;
@@ -64,11 +69,20 @@
   font-size: 22px;
   line-height: 1;
   letter-spacing: 2px;
+
+  @media ($tablet3) {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
 }
 .payments__item_row {
   display: flex;
   align-items: center;
   gap: 50px;
+
+  @media ($tablet3) {
+    gap: 38px;
+  }
 }
 .payments__item_title {
   color: #323232;
@@ -131,6 +145,12 @@
     font-size: 22px;
     line-height: 1;
     letter-spacing: 2px;
+
+    @media ($tablet3) {
+      width: 235px;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
   }
 }
 .payments_popup__form_input {

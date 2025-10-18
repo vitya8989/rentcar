@@ -22,7 +22,7 @@
 						<a href="/" class="header__logo">
 							<img src="./img/header/logo.svg" alt="">
 						</a>
-						<nav class="header__nav">
+						<nav class="header__nav js_nav">
 							<ul class="header__menu">
 								<li>
 									<a href="/catalog.html" class="header__menu_link">Новые машины</a>
@@ -37,13 +37,19 @@
 									<a href="/about.html" class="header__menu_link">О компании</a>
 								</li>
 							</ul>
+							<a href="/catalog.html" class="header__btn this--mobile btn this--primary">Выбрать машину</a>
 						</nav>
 					</div>
 					<div class="header__right">
 						<a href="/auth.html" class="header__link">
 							<img src="./img/header/lk.svg" alt="">
 						</a>
-						<a href="/catalog.html" class="header__btn btn this--secondary">Выбрать машину</a>
+						<a href="/catalog.html" class="header__btn this--desktop btn this--secondary">Выбрать машину</a>
+						<div class="header__burger js_burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -227,34 +233,36 @@
 				<div class="container">
 					<div class="detail_rent__content">
 						<h2 class="detail_rent h2_title">Условия аренды</h2>
-						<div class="detail_rent__table table">
-							<div class="table__row">
-								<div class="table__td">Минимальный срок аренды</div>
-								<div class="table__td this--bold">от 1 суток</div>
-							</div>
-							<div class="table__row">
-								<div class="table__td">Возраст арендатора</div>
-								<div class="table__td this--bold">от 25 лет</div>
-							</div>
-							<div class="table__row">
-								<div class="table__td">Стаж вождения</div>
-								<div class="table__td this--bold">от 3-х лет</div>
-							</div>
-							<div class="table__row">
-								<div class="table__td">Залог</div>
-								<div class="table__td this--bold">200 000 ₽ (возвращается при возврате авто)</div>
-							</div>
-							<div class="table__row">
-								<div class="table__td">Пробег включен</div>
-								<div class="table__td this--bold">200 км/сутки</div>
-							</div>
-							<div class="table__row">
-								<div class="table__td">Доп. км</div>
-								<div class="table__td this--bold">3 000 ₽ за 1 км</div>
-							</div>
-							<div class="table__row">
-								<div class="table__td">Страховка</div>
-								<div class="table__td this--bold">ОСАГО + КАСКО с франшизой</div>
+						<div class="detail_rent__table_wr">
+							<div class="detail_rent__table table">
+								<div class="table__row">
+									<div class="table__td">Минимальный срок аренды</div>
+									<div class="table__td this--bold">от 1 суток</div>
+								</div>
+								<div class="table__row">
+									<div class="table__td">Возраст арендатора</div>
+									<div class="table__td this--bold">от 25 лет</div>
+								</div>
+								<div class="table__row">
+									<div class="table__td">Стаж вождения</div>
+									<div class="table__td this--bold">от 3-х лет</div>
+								</div>
+								<div class="table__row">
+									<div class="table__td">Залог</div>
+									<div class="table__td this--bold">200 000 ₽ (возвращается при возврате авто)</div>
+								</div>
+								<div class="table__row">
+									<div class="table__td">Пробег включен</div>
+									<div class="table__td this--bold">200 км/сутки</div>
+								</div>
+								<div class="table__row">
+									<div class="table__td">Доп. км</div>
+									<div class="table__td this--bold">3 000 ₽ за 1 км</div>
+								</div>
+								<div class="table__row">
+									<div class="table__td">Страховка</div>
+									<div class="table__td this--bold">ОСАГО + КАСКО с франшизой</div>
+								</div>
 							</div>
 						</div>
 					</div>

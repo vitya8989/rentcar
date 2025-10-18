@@ -6,6 +6,10 @@
   background: #F6F5F3;
   border-radius: 20px;
 
+  @media ($tablet3) {
+    margin-top: 24px;
+  }
+
   input {
     display: none;
   }

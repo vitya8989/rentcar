@@ -9,6 +9,10 @@
   display: flex;
   align-items: center;
   gap: 70px;
+
+  @media ($desktop) {
+    gap: 50px;
+  }
 }
 .header__right {
   display: flex;
@@ -22,10 +26,39 @@
     width: 100%;
   }
 }
+.header__nav {
+  @media ($tablet) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    background: #222222;
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+
+    &.menu_opened {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
 .header__menu {
   display: flex;
   align-items: center;
   gap: 25px;
+
+  @media ($tablet) {
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .header__menu_link {
   color: #646464;
@@ -37,6 +70,11 @@
     @media #{$mouse-device} {
       color: #FF3B58;
     }
+  }
+  @media ($tablet) {
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 1;
   }
 }
 .header__link {
@@ -60,5 +98,64 @@
         opacity: 0.5;
       }
     }
+  }
+}
+.header__btn {
+  &.this--desktop {
+    @media ($tablet) {
+      display: none;
+    }
+  }
+  &.this--mobile {
+    display: none;
+    @media ($tablet) {
+      display: flex;
+      width: max-content;
+      margin: 20px auto 0;
+    }
+  }
+}
+.header__burger {
+  display: none;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+
+  span {
+    position: absolute;
+    width: 39px;
+    height: 2px;
+    background: #646464;
+    left: 3px;
+    transition: opacity 0.4s, top 0.4s, bottom 0.4s, transform 0.4s;
+  }
+  span:first-child {
+    top: 8px;
+  }
+  span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  span:last-child {
+    bottom: 8px;
+  }
+
+  &.menu_opened {
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:first-child {
+      top: calc(50% - 1px);
+      transform: rotate(45deg);
+    }
+    span:last-child {
+      bottom: calc(50% - 1px);
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media ($tablet) {
+    display: block;
   }
 }

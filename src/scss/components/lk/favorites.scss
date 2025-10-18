@@ -1,6 +1,22 @@
+.favorites {
+  @media ($desktopSmall) {
+    padding: 20px;
+  }
+}
 .favorites__items {
   margin-top: 34px;
   display: flex;
   margin-left: -18px;
   margin-bottom: -18px;
+  flex-wrap: wrap;
+
+  @media ($tablet3) {
+    margin-top: 24px;
+  }
+}
+.favorites__item {
+  @media (max-width: 1350px) {
+    width: calc(50% - 18px);
+
+  }
 }

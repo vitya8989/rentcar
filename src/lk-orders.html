@@ -22,7 +22,7 @@
 						<a href="/" class="header__logo">
 							<img src="./img/header/logo.svg" alt="">
 						</a>
-						<nav class="header__nav">
+						<nav class="header__nav js_nav">
 							<ul class="header__menu">
 								<li>
 									<a href="/catalog.html" class="header__menu_link">Новые машины</a>
@@ -37,13 +37,19 @@
 									<a href="/about.html" class="header__menu_link">О компании</a>
 								</li>
 							</ul>
+							<a href="/catalog.html" class="header__btn this--mobile btn this--primary">Выбрать машину</a>
 						</nav>
 					</div>
 					<div class="header__right">
 						<a href="/auth.html" class="header__link">
 							<img src="./img/header/lk.svg" alt="">
 						</a>
-						<a href="/catalog.html" class="header__btn btn this--secondary">Выбрать машину</a>
+						<a href="/catalog.html" class="header__btn this--desktop btn this--secondary">Выбрать машину</a>
+						<div class="header__burger js_burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -84,11 +90,13 @@
 								<div class="lk__container orders">
 									<div class="lk__container_title">Мои заказы</div>
 									<div class="orders__tabs">
-										<div class="orders__tabs_links">
-											<div class="orders__tabs_link js_orders_tabs_link active" data-tab="1">Все заказы</div>
-											<div class="orders__tabs_link js_orders_tabs_link" data-tab="2">Активные</div>
-											<div class="orders__tabs_link js_orders_tabs_link" data-tab="3">Завершенные</div>
-											<div class="orders__tabs_link js_orders_tabs_link" data-tab="4">Отмененные</div>
+										<div class="orders__tabs_links_wr">
+											<div class="orders__tabs_links">
+												<div class="orders__tabs_link js_orders_tabs_link active" data-tab="1">Все заказы</div>
+												<div class="orders__tabs_link js_orders_tabs_link" data-tab="2">Активные</div>
+												<div class="orders__tabs_link js_orders_tabs_link" data-tab="3">Завершенные</div>
+												<div class="orders__tabs_link js_orders_tabs_link" data-tab="4">Отмененные</div>
+											</div>
 										</div>
 										<div class="orders__tabs_bodies">
 											<div class="orders__tabs_body active js_orders_tabs_body" data-tab="1">
@@ -126,7 +134,7 @@
 												</div>
 											</div>
 											<div class="orders__tabs_body js_orders_tabs_body" data-tab="2">
-												<div class="orders__table">
+												<div class="orders__table orders_table">
 													<div class="orders_table__tr">
 														<div class="orders_table__td">№ 375684324387</div>
 														<div class="orders_table__td">01.10.2025</div>
@@ -142,7 +150,7 @@
 												</div>
 											</div>
 											<div class="orders__tabs_body js_orders_tabs_body" data-tab="3">
-												<div class="orders__table">
+												<div class="orders__table orders_table">
 													<div class="orders_table__tr">
 														<div class="orders_table__td">№ 375684324387</div>
 														<div class="orders_table__td">01.10.2025</div>
@@ -164,7 +172,7 @@
 												</div>
 											</div>
 											<div class="orders__tabs_body js_orders_tabs_body" data-tab="4">
-												<div class="orders__table">
+												<div class="orders__table orders_table">
 													<div class="orders_table__tr">
 														<div class="orders_table__td">№ 375684324387</div>
 														<div class="orders_table__td">01.10.2025</div>

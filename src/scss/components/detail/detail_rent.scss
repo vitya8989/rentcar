@@ -1,5 +1,20 @@
-.detail_rent__table {
+.detail_rent__table_wr {
   margin-top: 40px;
+
+  @media ($tablet) {
+    margin-top: 20px;
+  }
+  @media ($mobile) {
+    overflow-x: auto;
+    padding: 0 20px;
+    margin: 20px -20px 0;
+  }
+}
+.detail_rent__table {
+
+  @media ($mobile) {
+    width: 600px;
+  }
 
   &.table {
     &::before {

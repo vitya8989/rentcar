@@ -1,24 +1,49 @@
+.detail_top {
+  @media ($tablet) {
+    padding-top: 10px;
+  }
+}
 .detail_top__content {
   display: flex;
   gap: 20px;
   justify-content: space-between;
+
+  @media ($tablet3) {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
 }
 .detail_top__left {
   max-width: 576px;
   width: calc(50% - 10px);
+  @media ($tablet3) {
+    max-width: none;
+    width: 100%;
+  }
 }
 .detail_top__right {
   width: calc(50% - 10px);
+  @media ($tablet3) {
+    width: 100%;
+  }
 }
 .detail_top__title {
   margin-top: 26px;
   font-size: 46px;
+
+  @media ($tablet3) {
+    margin-top: 16px;
+  }
 }
 .detail_top__subtitle {
   margin-top: 4px;
   color: #646464;
   font-size: 16px;
   line-height: 1.4;
+
+  @media ($tablet3) {
+    font-size: 14px;
+  }
 }
 .detail_top__rating {
   margin-top: 8px;
@@ -46,6 +71,10 @@
 }
 .detail_top__prices {
   margin-top: 26px;
+
+  @media ($tablet3) {
+    margin-top: 16px;
+  }
 }
 .detail_top__old_price {
   font-family: GolosText, sans-serif;
@@ -55,6 +84,11 @@
   color: #828282;
   text-decoration: line-through;
   font-weight: 600;
+
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 .detail_top__price {
   font-family: GolosText, sans-serif;
@@ -63,6 +97,11 @@
   letter-spacing: -1px;
   color: #323232;
   font-weight: 600;
+
+  @media ($tablet3) {
+    font-size: 26px;
+    line-height: 29px;
+  }
 }
 .detail_top__price_text {
   margin-top: 5px;
@@ -72,18 +111,24 @@
 }
 .detail_top__dates {
   margin-top: 36px;
-}
-.detail_top__dates_title {
-  color: #646464;
-  font-size: 16px;
-  line-height: 1.4;
+
+  @media ($tablet3) {
+    margin-top: 26px;
+  }
 }
 .detail_top__dates_input {
-  margin-top: 14px;
   max-width: 340px;
+
+  @media ($tablet3) {
+    max-width: 335px;
+  }
 }
 .detail_top__characteristics {
   margin-top: 36px;
+
+  @media ($tablet3) {
+    margin-top: 26px;
+  }
 }
 .detail_top__characteristics_title {
   color: #646464;
@@ -97,6 +142,11 @@
   margin-top: 36px;
   width: 327px;
   height: 53px;
+
+  @media ($tablet3) {
+    margin-top: 26px;
+    width: 100%;
+  }
 }
 .detail_top__img {
   position: relative;
@@ -110,5 +160,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 40px;
+
+    @media ($tablet3) {
+      border-radius: 20px;
+    }
   }
 }

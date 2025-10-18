@@ -3,13 +3,32 @@
 }
 .footer__content {
   padding: 100px 0 60px;
+
+  @media ($tablet) {
+    padding: 60px 0 30px;
+  }
 }
 .footer__top {
   display: flex;
   gap: 80px;
+
+  @media ($desktop) {
+    gap: 40px;
+  }
+  @media ($tablet) {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 .footer__top_left {
   max-width: 420px;
+
+  @media ($desktop) {
+    max-width: 270px;
+  }
+  @media ($tablet) {
+    max-width: none;
+  }
 }
 .footer__logo {
   width: 200px;
@@ -27,12 +46,20 @@
 .footer__form {
   margin-top: 40px;
   max-width: 380px;
+
+  @media ($tablet3) {
+    margin-top: 20px;
+  }
 }
 .footer__form_input.text-input {
   position: relative;
   .footer__form_email {
     padding: 10px 155px 10px 17px;
     height: 42px;
+
+    @media ($tablet3) {
+      height: 52px;
+    }
   }
 }
 .footer__form_submit.btn {
@@ -44,15 +71,27 @@
   padding: 8px 20px;
   font-size: 14px;
   color: #ffffff;
+
+  @media ($tablet3) {
+    height: 46px;
+  }
 }
 .footer__social {
   margin-top: 40px;
   display: flex;
   align-items: center;
   gap: 16px;
+
+  @media ($tablet3) {
+    margin-top: 20px;
+    gap: 14px;
+  }
 }
 .footer__social_link {
   width: 24px;
+  @media ($tablet3) {
+    width: 48px;
+  }
 
   img {
     width: 100%;
@@ -63,6 +102,11 @@
   display: flex;
   justify-content: space-between;
   gap: 40px;
+
+  @media ($tablet3) {
+    gap: 30px;
+    flex-direction: column;
+  }
 }
 .footer__menu_title {
   color: #828282;
@@ -82,6 +126,11 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media ($tablet3) {
+    margin-top: 22px;
+    gap: 18px;
+  }
 }
 .footer__menu_link {
   color: #FFFFFF;
@@ -103,4 +152,9 @@
   text-align: center;
   font-size: 16px;
   line-height: 22px;
+
+  @media ($tablet) {
+    padding: 24px 0 14px;
+    margin-top: 20px;
+  }
 }

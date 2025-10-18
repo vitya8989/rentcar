@@ -18,6 +18,14 @@
   cursor: pointer;
   transition: opacity 0.25s;
 
+  @media ($tablet) {
+    font-size: 0;
+    width: auto;
+    gap: 0;
+    top: 20px;
+    right: 20px;
+  }
+
   &.hide {
     display: none;
   }
@@ -35,22 +43,43 @@
 }
 .personal__top {
   padding-right: 250px;
+
+  @media ($tablet3) {
+    padding-right: 0;
+  }
 }
 .personal__text {
   margin-top: 12px;
   font-size: 18px;
   line-height: 1.4;
   color: #646464;
+
+  @media ($tablet3) {
+    margin-top: 8px;
+    font-size: 16px;
+  }
 }
 .personal__form {
   margin-top: 34px;
   display: flex;
   flex-direction: column;
   gap: 28px;
+
+  @media ($tablet3) {
+      gap: 18px;
+    margin-top: 24px;
+  }
 }
 .personal__form_row {
   display: flex;
   gap: 10px;
+
+  @media ($tablet3) {
+    &:not(:first-child) {
+      flex-direction: column;
+      gap: 18px;
+    }
+  }
 }
 .personal__form_item {
   width: calc(50% - 5px);
@@ -59,6 +88,10 @@
   color: #646464;
   font-size: 18px;
   line-height: 1.4;
+
+  @media ($tablet3) {
+    font-size: 16px;
+  }
 }
 .personal__form_input {
   margin-top: 4px;
@@ -75,6 +108,10 @@
   max-width: 410px;
   margin-left: 152px;
   display: none;
+
+  @media ($tablet) {
+    margin: 6px auto 0;
+  }
 
   .personal__form.edit & {
     display: flex;

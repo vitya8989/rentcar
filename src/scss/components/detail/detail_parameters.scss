@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   margin-left: -20px;
   margin-bottom: -20px;
+
+  @media ($tablet) {
+    margin-top: 20px;
+  }
 }
 .detail_parameters__item {
   margin-left: 20px;
@@ -19,8 +23,26 @@
   justify-content: space-between;
   gap: 20px;
 
+  @media (max-width: 1400px) {
+    width: calc(33.333% - 20px);
+  }
+  @media ($tablet) {
+    width: calc(50% - 20px);
+  }
+  @media ($tablet3) {
+    width: calc(100% - 20px);
+    min-height: 120px;
+  }
+
   &.this--3 {
     width: calc(33.333% - 20px);
+
+    @media ($tablet) {
+      width: calc(50% - 20px);
+    }
+    @media ($tablet3) {
+      width: calc(100% - 20px);
+    }
   }
 }
 .detail_parameters__item_top {
@@ -47,4 +69,9 @@
   line-height: 31px;
   text-transform: uppercase;
   letter-spacing: -1px;
+
+  @media ($tablet3) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
